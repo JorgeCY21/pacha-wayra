@@ -1,0 +1,16 @@
+[
+{
+"id": "e1",
+"regionId": "lima",
+"title": "Dengue risk",
+"severity": "medium",
+"description": "Cases reported in the northern districts. Avoid standing water and use repellent."
+},
+{
+"id": "e2",
+"regionId": "madre-de-dios",
+"title": "Snake awareness",
+"severity": "low",
+"description": "Forest areas may present venomous snakes. Wear boots and follow guides."
+}
+]

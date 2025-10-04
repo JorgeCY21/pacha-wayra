@@ -1,0 +1,15 @@
+[
+{
+"id": "t1",
+"name": "Colca Canyon",
+"regionId": "arequipa",
+"regionName": "Arequipa",
+"summary": "One of the deepest canyons in the world.",
+"details": "Hiking routes, condor watching. Best visited early morning.",
+"activities": ["hiking","birdwatching"],
+"schedule": "Daily",
+"cost": "Entrance free, guided tours vary",
+"safety": "Bring warm clothing for mornings and plenty of water.",
+"image": "/images/colca.jpg"
+}
+]

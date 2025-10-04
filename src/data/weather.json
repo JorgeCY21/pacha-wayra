@@ -1,0 +1,16 @@
+[
+{
+"regionId": "arequipa",
+"regionName": "Arequipa",
+"temperatureC": 18,
+"humidityPercent": 30,
+"forecast": "clear"
+},
+{
+"regionId": "lima",
+"regionName": "Lima",
+"temperatureC": 22,
+"humidityPercent": 70,
+"forecast": "cloudy"
+}
+]
