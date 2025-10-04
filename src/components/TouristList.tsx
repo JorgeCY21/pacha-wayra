@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import sitesData from '../../public/data/tourist_sites.json'
+import sitesData from '../data/tourist_sites.json'
 
 interface Props {
   region: string

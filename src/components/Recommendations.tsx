@@ -1,4 +1,4 @@
-import weatherData from '../../public/data/weather.json'
+import weatherData from '../data/weather.json'
 
 interface Props {
   region: string

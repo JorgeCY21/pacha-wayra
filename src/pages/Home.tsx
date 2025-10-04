@@ -12,7 +12,6 @@ function Home() {
   return (
     <div className="space-y-6">
       <SearchFilter onRegionChange={setRegion} />
-      <WeatherCard region={region} />
       <Recommendations region={region} />
       <Alerts region={region} />
       <TouristList region={region} />

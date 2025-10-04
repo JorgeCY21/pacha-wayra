@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import sitesData from '../../public/data/tourist_sites.json'
+import sitesData from '../data/tourist_sites.json'
 
 interface Props {
   region: string

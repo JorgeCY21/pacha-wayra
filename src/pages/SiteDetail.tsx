@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import sitesData from '../../public/data/tourist_sites.json'
+import sitesData from '../data/tourist_sites.json'
 
 function SiteDetail() {
   const { id } = useParams()

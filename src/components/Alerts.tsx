@@ -1,4 +1,4 @@
-import epidemicData from '../../public/data/epidemics.json'
+import epidemicData from '../data/epidemics.json'
 
 interface Props {
   region: string
