@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🎨 Estilos globales */
 body {
-  @apply bg-gray-50 text-gray-900;
+  @apply bg-neutralLight text-neutralDark font-sans;
+  background-image: linear-gradient(to bottom right, #ecfdf5, #f0fdfa);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* 🌿 Scrollbar personalizada (opcional y elegante) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #10b981;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #059669;
 }
