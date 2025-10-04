@@ -1,42 +1,64 @@
-import { Sun, Leaf, MapPin } from "lucide-react";
+import { Mountain, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <footer className="relative mt-5 text-white text-center overflow-hidden">
-      {/* Imagen de fondo con overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1604089842857-4f6b5f2efc3f?auto=format&fit=crop&w=1400&q=80')",
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-teal-600 via-emerald-700 to-emerald-800/90 backdrop-blur-sm"></div>
+    <footer className="relative mt-16 bg-gradient-to-r from-emerald-600/90 to-teal-600/90 text-white border-t border-white/20">
+      {/* Efecto de brillo superior */}
+      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-300/50 via-yellow-200/30 to-emerald-300/30" />
+      
+      <div className="max-w-7xl mx-auto px-6 py-6">
+        <motion.div 
+          className="flex flex-col sm:flex-row justify-between items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          
+          {/* Logo y nombre */}
+          <motion.div 
+            className="flex items-center gap-3"
+            whileHover={{ scale: 1.05 }}
+          >
+            <div className="bg-white/20 backdrop-blur-sm p-1.5 rounded-xl">
+              <Mountain className="w-5 h-5 text-white" />
+            </div>
+            <span className="font-bold text-lg bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
+              PachaWayra
+            </span>
+          </motion.div>
 
-      {/* Contenido */}
-      <div className="relative z-10 py-6 px-4 md:px-12 space-y-3 max-w-7xl mx-auto">
-        <h3 className="text-xl md:text-2xl font-bold flex justify-center items-center gap-2">
-          <Sun size={20} /> Discover Peru Responsibly
-        </h3>
+          {/* Texto central */}
+          <motion.div 
+            className="flex items-center gap-2 text-sm text-emerald-100/90"
+            whileHover={{ scale: 1.02 }}
+          >
+            <span>Discover Peru with</span>
+            <span className="font-semibold text-white">PachaWayra</span>
+          </motion.div>
 
-        <p className="text-sm md:text-md text-emerald-100 max-w-2xl mx-auto">
-          Explore the beauty, culture, and nature of Peru sustainably — all in one app.
-        </p>
+          {/* Créditos */}
+          <motion.div 
+            className="flex items-center gap-2 text-xs text-emerald-100/80"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span>Made with</span>
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              💙
+            </motion.div>
+            <span>by</span>
+            <span className="font-semibold text-cyan-200">Los Desorbitados</span>
+            <span>• 2025</span>
+          </motion.div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-3 text-emerald-200 text-xs md:text-sm mt-3">
-          <div className="flex items-center gap-1.5">
-            <MapPin size={16} /> Arequipa, Peru
-          </div>
-          <div className="flex items-center gap-1.5">
-            <Leaf size={16} /> Eco-friendly App
-          </div>
-        </div>
-
-        <p className="text-xs text-emerald-200 mt-2">
-          © 2025{" "}
-          <span className="text-yellow-300 font-medium">Pacha-Wayra</span> — Created with 💙 by <strong>Los Desorbitados</strong>
-        </p>
+        </motion.div>
       </div>
+
+      {/* Línea decorativa inferior */}
+      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-emerald-300/20 via-cyan-300/30 to-teal-300/20" />
     </footer>
   );
 }
