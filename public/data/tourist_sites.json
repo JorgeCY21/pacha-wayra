@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "region": "Cusco",
+    "name": "Machu Picchu",
+    "description": "Ancient Inca citadel on a mountain ridge.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg",
+    "lat": -13.1631,
+    "lng": -72.545
+  },
+  {
+    "id": 2,
+    "region": "Arequipa",
+    "name": "Colca Canyon",
+    "description": "One of the deepest canyons in the world.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Colca_Canyon_Peru.jpg",
+    "lat": -15.6425,
+    "lng": -71.9145
+  },
+  {
+    "id": 3,
+    "region": "Puno",
+    "name": "Lake Titicaca",
+    "description": "The highest navigable lake in the world.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/Lake_Titicaca_Peru.jpg",
+    "lat": -15.75,
+    "lng": -69.4167
+  },
+  {
+    "id": 4,
+    "region": "Lima",
+    "name": "Nazca Lines",
+    "description": "Mysterious geoglyphs in the desert of southern Peru.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Nazca_Lines_2007.jpg",
+    "lat": -14.739,
+    "lng": -75.13
+  }
+]

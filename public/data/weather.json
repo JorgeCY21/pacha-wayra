@@ -1,0 +1,6 @@
+[
+  { "region": "Cusco", "temperature": 12, "humidity": 70, "forecast": "Sunny" },
+  { "region": "Arequipa", "temperature": 20, "humidity": 40, "forecast": "Clear" },
+  { "region": "Lima", "temperature": 23, "humidity": 65, "forecast": "Cloudy" },
+  { "region": "Puno", "temperature": 8, "humidity": 60, "forecast": "Cold" }
+]
