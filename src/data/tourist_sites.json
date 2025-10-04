@@ -3,36 +3,200 @@
     "id": 1,
     "region": "Cusco",
     "name": "Machu Picchu",
-    "description": "Ancient Inca citadel on a mountain ridge.",
+    "description": "Antigua ciudadela inca en la cordillera andina, Patrimonio de la Humanidad.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg",
     "lat": -13.1631,
-    "lng": -72.545
+    "lng": -72.545,
+    "category": "Arqueológico"
   },
   {
     "id": 2,
     "region": "Arequipa",
-    "name": "Colca Canyon",
-    "description": "One of the deepest canyons in the world.",
+    "name": "Cañón del Colca",
+    "description": "Uno de los cañones más profundos del mundo, famoso por el vuelo del cóndor.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Colca_Canyon_Peru.jpg",
     "lat": -15.6425,
-    "lng": -71.9145
+    "lng": -71.9145,
+    "category": "Natural"
   },
   {
     "id": 3,
     "region": "Puno",
-    "name": "Lake Titicaca",
-    "description": "The highest navigable lake in the world.",
+    "name": "Lago Titicaca",
+    "description": "Lago navegable más alto del mundo, hogar de las islas flotantes de los Uros.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/Lake_Titicaca_Peru.jpg",
     "lat": -15.75,
-    "lng": -69.4167
+    "lng": -69.4167,
+    "category": "Natural"
   },
   {
     "id": 4,
-    "region": "Lima",
-    "name": "Nazca Lines",
-    "description": "Mysterious geoglyphs in the desert of southern Peru.",
+    "region": "Ica",
+    "name": "Líneas de Nazca",
+    "description": "Misteriosos geoglifos en el desierto, visibles desde el aire.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Nazca_Lines_2007.jpg",
     "lat": -14.739,
-    "lng": -75.13
+    "lng": -75.13,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 5,
+    "region": "Cusco",
+    "name": "Valle Sagrado",
+    "description": "Fértil valle andino con numerosos sitios arqueológicos incas.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Urubamba_valley.jpg",
+    "lat": -13.3044,
+    "lng": -72.1167,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 6,
+    "region": "Lima",
+    "name": "Centro Histórico de Lima",
+    "description": "Patrimonio de la Humanidad con arquitectura colonial española.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Plaza_Mayor_de_Lima_2015.jpg",
+    "lat": -12.0464,
+    "lng": -77.0428,
+    "category": "Cultural"
+  },
+  {
+    "id": 7,
+    "region": "La Libertad",
+    "name": "Chan Chan",
+    "description": "Ciudad de adobe más grande de América precolombina, capital Chimú.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Chan_Chan_01.jpg",
+    "lat": -8.1056,
+    "lng": -79.075,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 8,
+    "region": "La Libertad",
+    "name": "Huaca del Sol y la Luna",
+    "description": "Importante centro ceremonial de la cultura Moche.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Huaca_de_la_Luna_2.jpg",
+    "lat": -8.1333,
+    "lng": -78.9997,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 9,
+    "region": "Lambayeque",
+    "name": "Tumbas Reales de Sipán",
+    "description": "Importante descubrimiento arqueológico de la cultura Moche.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Museo_Tumbas_Reales_de_Sipan.jpg",
+    "lat": -6.8178,
+    "lng": -79.5931,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 10,
+    "region": "Arequipa",
+    "name": "Monasterio de Santa Catalina",
+    "description": "Monasterio colonial español del siglo XVI en el centro de Arequipa.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Santa_Catalina_Monastery_Arequipa_Peru.jpg",
+    "lat": -16.3989,
+    "lng": -71.5369,
+    "category": "Cultural"
+  },
+  {
+    "id": 11,
+    "region": "Cusco",
+    "name": "Sacsayhuamán",
+    "description": "Fortaleza ceremonial inca con impresionantes muros de piedra.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Sacsayhuaman_2006.jpg",
+    "lat": -13.5083,
+    "lng": -71.9819,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 12,
+    "region": "Amazonas",
+    "name": "Fortaleza de Kuélap",
+    "description": "Ciudadela preinca de la cultura Chachapoyas en la selva alta.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Kuelap_-_Chachapoyas_-_Peru_%281%29.jpg",
+    "lat": -6.4186,
+    "lng": -77.925,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 13,
+    "region": "Ica",
+    "name": "Reserva Nacional de Paracas",
+    "description": "Área protegida con rica biodiversidad marina y el Candelabro.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Paracas_National_Reserve%2C_Peru.jpg",
+    "lat": -14.2167,
+    "lng": -76.2,
+    "category": "Natural"
+  },
+  {
+    "id": 14,
+    "region": "Madre de Dios",
+    "name": "Reserva Nacional Tambopata",
+    "description": "Una de las áreas con mayor biodiversidad en la Amazonía peruana.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Tambopata_River.jpg",
+    "lat": -12.8333,
+    "lng": -69.2833,
+    "category": "Natural"
+  },
+  {
+    "id": 15,
+    "region": "Ancash",
+    "name": "Parque Nacional Huascarán",
+    "description": "Patrimonio Natural de la Humanidad en la Cordillera Blanca.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Huascaran.jpg",
+    "lat": -9.3333,
+    "lng": -77.4167,
+    "category": "Natural"
+  },
+  {
+    "id": 16,
+    "region": "Cajamarca",
+    "name": "Ventanillas de Otuzco",
+    "description": "Necrópolis preinca con nichos tallados en roca volcánica.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ventanillas_de_Otuzco.jpg",
+    "lat": -7.1667,
+    "lng": -78.5167,
+    "category": "Arqueológico"
+  },
+  {
+    "id": 17,
+    "region": "Loreto",
+    "name": "Río Amazonas",
+    "description": "El río más caudaloso del mundo, con exuberante selva tropical.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Amazon_river_basin.png",
+    "lat": -3.4667,
+    "lng": -72.7833,
+    "category": "Natural"
+  },
+  {
+    "id": 18,
+    "region": "Cusco",
+    "name": "Montaña de 7 Colores",
+    "description": "Vinicunca, montaña con franjas de colores naturales.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Vinicunca_-_Monta%C3%B1a_de_Siete_Colores.jpg",
+    "lat": -13.6864,
+    "lng": -71.3039,
+    "category": "Natural"
+  },
+  {
+    "id": 19,
+    "region": "Piura",
+    "name": "Máncora",
+    "description": "Famosa playa y destino turístico en la costa norte del Perú.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mancora_Peru.jpg",
+    "lat": -4.1167,
+    "lng": -81.05,
+    "category": "Playas"
+  },
+  {
+    "id": 20,
+    "region": "Ica",
+    "name": "Oasis de Huacachina",
+    "description": "Oasis natural en medio del desierto, rodeado de dunas de arena.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Huacachina.jpg",
+    "lat": -14.0878,
+    "lng": -75.7633,
+    "category": "Natural"
   }
 ]

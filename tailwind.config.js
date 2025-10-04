@@ -1,22 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "#0d9488",       // Verde esmeralda principal 🌿
-        secondary: "#10b981",     // Verde brillante
-        accent: "#fbbf24",        // Amarillo cálido
-        neutralLight: "#f8fafc",  // Fondo claro
-        neutralDark: "#1e293b",   // Gris oscuro
-      },
-      fontFamily: {
-        sans: ["'Poppins'", "sans-serif"],
+        primary: "#1E40AF",     // azul principal
+        secondary: "#FACC15",   // amarillo o contraste
+        background: "#F3F4F6",  // gris claro para fondo general
+        footer: "#111827",      // fondo de footer
       },
     },
   },
   plugins: [],
-}
+};
