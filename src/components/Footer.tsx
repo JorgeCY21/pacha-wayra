@@ -1,4 +1,4 @@
-import { Mountain, Heart } from "lucide-react";
+import { Mountain } from "lucide-react";
 import { motion } from "framer-motion";
 
 function Footer() {
@@ -47,7 +47,6 @@ function Footer() {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              💙
             </motion.div>
             <span>by</span>
             <span className="font-semibold text-cyan-200">Los Desorbitados</span>
