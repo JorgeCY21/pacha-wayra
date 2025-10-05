@@ -174,7 +174,7 @@ function Home() {
                   Interactive Map
                 </h3>
               </div>
-              <MapView region={region} />
+              <MapView />
             </div>
 
             {/* Información Adicional */}
