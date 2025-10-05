@@ -5,6 +5,7 @@ import { ArrowLeft, MapPin, Calendar, Utensils, Activity, Sun, CloudRain, Snowfl
 import sitesData from '../data/tourist_sites.json'
 import weatherData from '../data/weather.json'
 import departmentData from '../data/departments.json'
+import PDFExporter from '../components/PDFExporter';
 
 function SiteDetail() {
   const { id } = useParams()
@@ -316,6 +317,22 @@ function SiteDetail() {
                 <li>• Respect local customs and traditions</li>
               </ul>
             </motion.div>
+              
+              {weather && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="bg-none rounded-2xl p-6 "
+                >
+                  <PDFExporter 
+                    site={site}
+                    weather={weather}
+                    activities={activities}
+                    foods={foods}
+                    packingItems={packingItems}
+                  />
+                </motion.div>
+              )}
           </div>
         </div>
       </div>

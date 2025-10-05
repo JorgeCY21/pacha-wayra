@@ -43,24 +43,7 @@ function MapView({ region, date }: Props) {
   return (
     <div className="h-96 rounded-2xl overflow-hidden shadow">
       {/* Map Header */}
-      <div className="bg-white p-4 border-b">
-        <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-gray-800">Regional Map</h3>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Calendar size={16} />
-            <span>{date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
-            {seasonalInfo.daysFromNow > 0 && (
-              <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">
-                +{seasonalInfo.daysFromNow}d
-              </span>
-            )}
-          </div>
-        </div>
-        <p className="text-xs text-gray-500 mt-1">
-          {seasonalInfo.weatherNote} • {seasonalInfo.season} season
-        </p>
-      </div>
-
+    
       <MapContainer
         center={[-9.19, -75.0152] as [number, number]}
         zoom={6}
