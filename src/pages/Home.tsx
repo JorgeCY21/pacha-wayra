@@ -155,22 +155,6 @@ function Home() {
             className="bg-white rounded-2xl p-6 shadow-xl border border-cyan-100 hover:shadow-2xl transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-cyan-100 rounded-xl">
-                <Calendar className="text-cyan-600" size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-800">Weather Forecast</h3>
-                <p className="text-sm text-gray-600">
-                  {selectedDate.toLocaleDateString('en-US', { 
-                    weekday: 'long',
-                    month: 'long', 
-                    day: 'numeric',
-                    year: 'numeric'
-                  })}
-                </p>
-              </div>
-            </div>
             <WeatherCard region={region} date={selectedDate} />
           </motion.div>
 
