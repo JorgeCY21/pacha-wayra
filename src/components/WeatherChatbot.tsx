@@ -1,84 +1,90 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Bot, Sun, Cloud, CloudRain, Snowflake } from 'lucide-react';
+import { MessageCircle, X, Bot, Thermometer, ThermometerSun, ThermometerSnowflake } from 'lucide-react';
 
 interface WeatherChatbotProps {
   region: string;
   date: Date;
   touristSite?: string;
-  weatherCondition?: string;
+  temperature?: number; // Ahora recibimos la temperatura directamente
 }
 
-function WeatherChatbot({ region, date, weatherCondition, touristSite }: WeatherChatbotProps) {
+function WeatherChatbot({ region, date, touristSite, temperature }: WeatherChatbotProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentMessage, setCurrentMessage] = useState('');
 
-  // Determinar el personaje basado en las condiciones climáticas
-  const getCharacterByWeather = () => {
-    const condition = weatherCondition?.toLowerCase() || '';
-    
-    if (condition.includes('sunny') || condition.includes('clear')) {
+  // Determinar el personaje basado en la temperatura
+  const getCharacterByTemperature = () => {
+    // Si no hay temperatura, usar normal-bot por defecto
+    if (temperature === undefined || temperature === null) {
       return {
-        image: '/characters/sunny-bot.png',
-        alt: 'Sunny Day Guide',
-        bgColor: 'from-yellow-400 to-orange-400',
-        icon: <Sun className="text-yellow-600" size={20} />,
-        bubbleColor: 'bg-yellow-100 border-yellow-300'
+        image: '/characters/normal-bot.png',
+        alt: 'Normal Weather Guide',
+        bgColor: 'from-emerald-400 to-teal-500',
+        icon: <Thermometer className="text-emerald-600" size={20} />,
+        bubbleColor: 'bg-emerald-100 border-emerald-300'
       };
-    } else if (condition.includes('rain') || condition.includes('drizzle') || condition.includes('rainy')) {
+    }
+
+    // Clasificar según temperatura
+    if (temperature > 25) {
+      // Hot bot - clima caliente
       return {
-        image: '/characters/rainy-bot.png',
-        alt: 'Rainy Day Guide',
-        bgColor: 'from-blue-400 to-cyan-500',
-        icon: <CloudRain className="text-blue-600" size={20} />,
-        bubbleColor: 'bg-blue-100 border-blue-300'
+        image: '/characters/hot-bot.png',
+        alt: 'Hot Weather Guide',
+        bgColor: 'from-orange-400 to-red-500',
+        icon: <ThermometerSun className="text-orange-600" size={20} />,
+        bubbleColor: 'bg-orange-100 border-orange-300'
       };
-    } else if (condition.includes('cloud') || condition.includes('overcast') || condition.includes('cloudy')) {
+    } else if (temperature < 15) {
+      // Ice bot - clima frío
       return {
-        image: '/characters/cloudy-bot.png',
-        alt: 'Cloudy Day Guide',
-        bgColor: 'from-gray-400 to-gray-500',
-        icon: <Cloud className="text-gray-600" size={20} />,
-        bubbleColor: 'bg-gray-100 border-gray-300'
-      };
-    } else if (condition.includes('snow') || condition.includes('cold') || condition.includes('snowy')) {
-      return {
-        image: '/characters/snowy-bot.png',
-        alt: 'Snowy Day Guide',
-        bgColor: 'from-cyan-300 to-blue-300',
-        icon: <Snowflake className="text-cyan-600" size={20} />,
+        image: '/characters/ice-bot.png',
+        alt: 'Cold Weather Guide',
+        bgColor: 'from-cyan-400 to-blue-500',
+        icon: <ThermometerSnowflake className="text-cyan-600" size={20} />,
         bubbleColor: 'bg-cyan-100 border-cyan-300'
       };
     } else {
-      // Default character
+      // Normal bot - temperatura moderada
       return {
-        image: '/characters/default-bot.png',
-        alt: 'Weather Guide',
+        image: '/characters/normal-bot.png',
+        alt: 'Normal Weather Guide',
         bgColor: 'from-emerald-400 to-teal-500',
-        icon: <Bot className="text-emerald-600" size={20} />,
+        icon: <Thermometer className="text-emerald-600" size={20} />,
         bubbleColor: 'bg-emerald-100 border-emerald-300'
       };
     }
   };
 
-  const character = getCharacterByWeather();
+  const character = getCharacterByTemperature();
 
-  // Generar mensaje basado en si es un sitio específico o región general
+  // Generar mensaje basado en la temperatura y ubicación
   useEffect(() => {
     const locationName = touristSite || region;
+    const temp = temperature || 20; // Temperatura por defecto si no hay data
     
+    let temperatureContext = '';
+    if (temp > 25) {
+      temperatureContext = 'hot weather';
+    } else if (temp < 15) {
+      temperatureContext = 'cool weather';
+    } else {
+      temperatureContext = 'perfect weather';
+    }
+
     const messages = [
-      `Want to know more about ${locationName}? I can tell you about the best spots and weather tips! 🌤️`,
-      `Planning your trip to ${locationName}? Let me help you with local insights and weather advice! 🗺️`,
-      `Curious about ${locationName}'s climate? I've got all the details you need for perfect planning! 🌈`,
-      `Exploring ${locationName}? Ask me about hidden gems and weather conditions! 💎`,
-      `Ready for ${locationName}? I'm here to share local knowledge and forecast tips! 📍`,
-      `Visiting ${locationName} soon? I can help you prepare for the weather and activities! 🎒`
+      `Exploring ${locationName} in ${temperatureContext}? I've got the best tips for you! 🌡️`,
+      `Planning your ${locationName} trip? Let me help you prepare for ${temp}°C conditions! 🎒`,
+      `Getting ready for ${locationName}'s ${temperatureContext}? I'm here to guide you! 📍`,
+      `Want to make the most of ${locationName} in ${temp}°C? I know all the secrets! 💎`,
+      `Visiting ${locationName} with ${temperatureContext}? Let's plan your perfect day! 🗺️`,
+      `Curious about ${locationName} in ${temp}°C? I can share the best activities! 🌤️`
     ];
     
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     setCurrentMessage(randomMessage);
-  }, [region, touristSite, date]);
+  }, [region, touristSite, date, temperature]);
 
   return (
     <>
@@ -112,23 +118,23 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
             <img 
               src={character.image} 
               alt={character.alt}
-              className="w-48 h-48 object-contain " // Tamaño ajustable aquí
+              className="w-48 h-48 object-contain "
               onError={(e) => {
                 // Fallback si la imagen no carga
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
                 const fallback = document.createElement('div');
-                fallback.className = `w-24 h-24 rounded-full bg-gradient-to-br ${character.bgColor} flex items-center justify-center`;
-                fallback.innerHTML = '<svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm3 0h-2v-6h2v6zm3 0h-2v-6h2v6z"/></svg>';
+                fallback.className = `w-48 h-48 rounded-full bg-gradient-to-br ${character.bgColor} flex items-center justify-center`;
+                fallback.innerHTML = '<svg class="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm3 0h-2v-6h2v6zm3 0h-2v-6h2v6z"/></svg>';
                 target.parentNode?.appendChild(fallback);
               }}
             />
             
             {/* Online indicator */}
-            <div className="absolute bottom-2 right-2 w-4 h-4 bg-green-400 border-2 border-white rounded-full shadow-lg"></div>
+            <div className="absolute bottom-4 right-4 w-6 h-6 bg-green-400 border-2 border-white rounded-full shadow-lg"></div>
             
             {/* Efecto de brillo sutil */}
-            <div className="absolute inset-0rounded-lg pointer-events-none"></div>
+            <div className="absolute inset-0 bg-white/10 rounded-lg pointer-events-none"></div>
           </div>
         </motion.button>
       </div>
@@ -165,7 +171,9 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
                     </div>
                     <div>
                       <h3 className="font-bold text-lg">Weather Guide</h3>
-                      <p className="text-white/80 text-sm">Online • Ready to help</p>
+                      <p className="text-white/80 text-sm">
+                        {temperature !== undefined ? `${temperature}°C • ` : ''}Online • Ready to help
+                      </p>
                     </div>
                   </div>
                   <button
@@ -178,7 +186,7 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
               </div>
 
               {/* Character Image in Modal - También completa */}
-              <div className="flex justify-center -mt-6 mb-2">
+              <div className="flex justify-center -mt-8 mb-2">
                 <motion.div
                   className="overflow-visible"
                   initial={{ scale: 0 }}
@@ -188,7 +196,7 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
                   <img 
                     src={character.image} 
                     alt={character.alt}
-                    className="w-16 h-16 object-contain" // Tamaño más pequeño para el modal
+                    className="w-24 h-24 object-contain"
                   />
                 </motion.div>
               </div>
@@ -199,6 +207,7 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
                 <div className="text-center mb-6">
                   <p className="text-gray-600 text-sm">
                     Hi! I'm your {character.alt.toLowerCase()}
+                    {temperature !== undefined && ` for ${temperature}°C`}
                   </p>
                 </div>
 
@@ -215,18 +224,18 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
                 {/* Quick Actions */}
                 <div className="space-y-2">
                   <button className="w-full text-left bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-2xl px-4 py-3 hover:from-emerald-100 hover:to-teal-100 transition-colors">
-                    <p className="font-semibold text-emerald-800 text-sm">Best time to visit {touristSite || region}</p>
-                    <p className="text-emerald-600 text-xs">Optimal seasons and months</p>
+                    <p className="font-semibold text-emerald-800 text-sm">Best activities for {temperature}°C</p>
+                    <p className="text-emerald-600 text-xs">Perfect things to do in this weather</p>
                   </button>
                   
                   <button className="w-full text-left bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl px-4 py-3 hover:from-blue-100 hover:to-cyan-100 transition-colors">
-                    <p className="font-semibold text-blue-800 text-sm">Weather alerts</p>
-                    <p className="text-blue-600 text-xs">Current warnings and advisories</p>
+                    <p className="font-semibold text-blue-800 text-sm">Packing guide</p>
+                    <p className="text-blue-600 text-xs">What to wear for {temperature}°C</p>
                   </button>
                   
                   <button className="w-full text-left bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-200 rounded-2xl px-4 py-3 hover:from-purple-100 hover:to-violet-100 transition-colors">
-                    <p className="font-semibold text-purple-800 text-sm">Packing tips</p>
-                    <p className="text-purple-600 text-xs">What to bring for your trip</p>
+                    <p className="font-semibold text-purple-800 text-sm">Local tips for {touristSite || region}</p>
+                    <p className="text-purple-600 text-xs">Hidden gems and best spots</p>
                   </button>
                 </div>
               </div>
@@ -236,7 +245,7 @@ function WeatherChatbot({ region, date, weatherCondition, touristSite }: Weather
                 <div className="flex gap-2">
                   <input
                     type="text"
-                    placeholder="Ask about weather, places, or tips..."
+                    placeholder={`Ask about ${temperature}°C weather, activities, or tips...`}
                     className="flex-1 bg-gray-100 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   />
                   <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl px-4 py-3 hover:from-emerald-600 hover:to-teal-600 transition-colors">
