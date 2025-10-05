@@ -7,6 +7,7 @@ import SearchFilter from "../components/SearchFilter"
 import MapView from "../components/MapView"
 import TemperatureChart from "../components/TemperatureChart";
 import WindChart from "../components/WindChart";
+import WeatherChatbot from "../components/WeatherChatbot"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Leaf, Sun, Mountain, Sparkles, Compass, AlertTriangle, Calendar } from "lucide-react"
@@ -295,6 +296,11 @@ function Home() {
           </p>
         </div>
       </motion.div>
+      <WeatherChatbot 
+        region={region}
+        date={selectedDate}
+        weatherCondition="sunny" // Esto vendría de tu API de clima
+      />
     </div>
   )
 }
