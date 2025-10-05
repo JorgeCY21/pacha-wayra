@@ -6,6 +6,7 @@ import sitesData from '../data/tourist_sites.json'
 import weatherData from '../data/weather.json'
 import departmentData from '../data/departments.json'
 import PDFExporter from '../components/PDFExporter';
+import WeatherChatbot from '../components/WeatherChatbot'; // Añade esta importación
 
 function SiteDetail() {
   const { id } = useParams()
@@ -336,6 +337,14 @@ function SiteDetail() {
           </div>
         </div>
       </div>
+
+      {/* 🌟 AÑADE EL CHATBOT AQUÍ - FUERA DEL CONTENEDOR PRINCIPAL */}
+      <WeatherChatbot 
+        region={site.name}
+        date={selectedDate}
+        weatherCondition={weather?.forecast}
+        touristSite={site.name}
+      />
     </div>
   )
 }
