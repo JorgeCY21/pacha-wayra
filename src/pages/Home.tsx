@@ -1,4 +1,5 @@
 import WeatherCard from "../components/WeatherCard"
+import DaySelector from "../components/DaySelector"
 import Recommendations from "../components/Recommendations"
 import Alerts from "../components/Alerts"
 import TouristList from "../components/TouristList"
