@@ -11,7 +11,7 @@ interface WindChartProps {
   date: Date;
 }
 
-function WindChart({ region, date }: WindChartProps) {
+function WindChart({ region }: WindChartProps) {
   const generateWindData = (): WindData[] => {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 

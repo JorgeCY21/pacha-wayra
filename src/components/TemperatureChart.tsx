@@ -11,7 +11,7 @@ interface TemperatureChartProps {
   date: Date;
 }
 
-function TemperatureChart({ region, date }: TemperatureChartProps) {
+function TemperatureChart({ region }: TemperatureChartProps) {
   const generateTemperatureData = (): TemperatureData[] => {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
