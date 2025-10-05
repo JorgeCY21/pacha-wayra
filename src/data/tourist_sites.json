@@ -2274,7 +2274,7 @@
     "region": "Tumbes",
     "name": "Aguas Verdes Border Market",
     "description": "Vibrant international market on the Peru-Ecuador border, offering a wide variety of goods from both countries. The market showcases the cultural and commercial exchange between neighboring nations.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://diariocorreo.pe/resizer/OzQdZIeTvp6H3PFkZJ069UZp8II=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/U56CM64RIZBLXHBOSJ5XSFFETE.jpg",
     "lat": -3.4833,
     "lng": -80.2333,
     "category": "Cultural"
@@ -2284,7 +2284,7 @@
     "region": "Tumbes",
     "name": "Pizarro's Cross",
     "description": "Historic site marking where Spanish conquistador Francisco Pizarro first landed in Peru in 1528. The monument commemorates the beginning of Spanish exploration and colonization in South America.",
-    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.turismoperuano.com/wp-content/uploads/la-cruz-de-la-conquista-tumbes.jpg",
     "lat": -3.5667,
     "lng": -80.4333,
     "category": "Cultural"
@@ -2294,7 +2294,7 @@
     "region": "Tumbes",
     "name": "El Bendito Fishing Village",
     "description": "Traditional fishing community where locals continue ancient fishing techniques using small boats and nets. The village offers authentic experiences of coastal life and fresh seafood straight from the ocean.",
-    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOXnF2W5mLox_4Hei6aacsqtAcPpTJkVQJ5HR9u5wJvKAo3dzoRu7ONt_kuQBXD__K3lumO2iXRYr-TsyKQWLfWnZcOiIhFk1KDFfHMvlj-RDtn4TOSwKV-7_oUKFdVMnAePrN4S5TFaP0/s1600/reducIMG_5523.JPG",
     "lat": -3.8833,
     "lng": -80.8667,
     "category": "Cultural"
@@ -2304,7 +2304,7 @@
     "region": "Ucayali",
     "name": "Lake Yarinacocha",
     "description": "A large oxbow lake formed by the Ucayali River, known for its biodiversity and vibrant pink river dolphins. It's a gateway to indigenous Shipibo communities, where visitors can learn about traditional crafts and customs.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Laguna_de_Yarinacocha_GCA.jpg",
     "lat": -8.35,
     "lng": -74.5667,
     "category": "Natural"
@@ -2314,7 +2314,7 @@
     "region": "Ucayali",
     "name": "Ucayali River",
     "description": "One of the main headwaters of the Amazon River, this massive waterway is a lifeline for the region. Boat journeys along the river offer unparalleled opportunities to witness the immensity of the Amazon basin and its wildlife.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://i.pinimg.com/736x/90/a5/5b/90a55b74cf4660ef962238e1938e633f.jpg",
     "lat": -6.0833,
     "lng": -73.7667,
     "category": "Natural"
@@ -2324,19 +2324,9 @@
     "region": "Ucayali",
     "name": "Cordillera Azul National Park",
     "description": "A vast and remote national park protecting a section of the tropical Andes known as the 'Blue Mountains.' It features dramatic waterfalls, deep canyons, and an incredible array of endemic species, making it a paradise for scientific research and adventure.",
-    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.cima.org.pe/files/images/parque-nacional-cordillera-azul/ecosistemaLagunas-mediana.jpg",
     "lat": -7.75,
     "lng": -75.9,
-    "category": "Natural"
-  },
-  {
-    "id": 234,
-    "region": "Ucayali",
-    "name": "Bosanatz Park",
-    "description": "The main ecological park and green lung of the city of Pucallpa. It features walking trails through preserved jungle, a small lagoon, and is a popular spot for locals and tourists to experience the rainforest's flora and fauna without leaving the city.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-0.3.5&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    "lat": -8.3833,
-    "lng": -74.5333,
     "category": "Natural"
   },
   {
@@ -2344,7 +2334,7 @@
     "region": "Ucayali",
     "name": "Shipibo-Conibo Community of San Francisco",
     "description": "An indigenous community on the shores of Lake Yarinacocha renowned for its intricate and symbolic Kené artwork. Visitors can meet artisans, learn about their cosmology, and purchase directly sourced textiles and ceramics.",
-    "image": "https://images.unsplash.com/photo-1559136558-0a8e0dd66c0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Plaza_central_de_la_comunidad_nativa_de_San_Francisco_de_Yanacocha.jpg",
     "lat": -8.3667,
     "lng": -74.55,
     "category": "Cultural"
@@ -2354,7 +2344,7 @@
     "region": "Ucayali",
     "name": "Municipal Museum of Pucallpa",
     "description": "A cultural museum showcasing the archaeological history, biodiversity, and ethnography of the Ucayali region. Its collections include Shipibo-Conibo artifacts, regional fossils, and exhibits on the area's natural history.",
-    "image": "https://images.unsplash.com/photo-1583454377334-1c7f7b55e26e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://4.bp.blogspot.com/-a4VYIfUGjY8/WaC9nXWb5hI/AAAAAAAA_2s/x-sIlKsPqyEEha1ZovevAJt0CeOqz4V8wCLcBGAs/s640/museo-regional-de-ucayali.jpg",
     "lat": -8.3833,
     "lng": -74.55,
     "category": "Cultural"
@@ -2364,7 +2354,7 @@
     "region": "Ucayali",
     "name": "Boquerón del Padre Abad",
     "description": "A stunning natural corridor located in the El Sira Communal Reserve, featuring a narrow canyon with towering rock walls, lush vegetation, and the iconic 'Dormilon' waterfall. A key landmark on the Federico Basadre highway.",
-    "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Boquer%C3%B3n_de_Padre_Abad.jpg/1200px-Boquer%C3%B3n_de_Padre_Abad.jpg",
     "lat": -9.0333,
     "lng": -75.7667,
     "category": "Natural"
@@ -2374,7 +2364,7 @@
     "region": "Ucayali",
     "name": "Velo de la Novia Waterfall",
     "description": "Meaning 'Bride's Veil,' this beautiful waterfall is one of the main attractions within the Boquerón del Padre Abad. Its waters cascade down a dramatic rock face, creating a picturesque scene amidst the dense jungle.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Velo_de_la_Novia_Falls.jpg",
     "lat": -9.0333,
     "lng": -75.7667,
     "category": "Natural"
@@ -2384,7 +2374,7 @@
     "region": "Ucayali",
     "name": "Alexander von Humboldt National Forest",
     "description": "A protected area dedicated to the sustainable management of timber and non-timber forest resources. It serves as an important site for conservation, research, and environmental education in the Peruvian Amazon.",
-    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaXAQstNXwKC9hN8p4wmIYsfjz8IGykZwy8Q&s",
     "lat": -8.5,
     "lng": -74.6667,
     "category": "Natural"
@@ -2394,7 +2384,7 @@
     "region": "Ucayali",
     "name": "Puerto Inca Archaeological Site",
     "description": "Known as the 'Inca Port,' this archaeological complex is believed to have been a resting and provisioning point for the Incas on their route from the Andes to the Amazon. It features stone structures and offers insight into Inca expansion.",
-    "image": "https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.incatrailmachu.com/img/peru-ruins-000.jpg",
     "lat": -9.3833,
     "lng": -74.9833,
     "category": "Cultural"
