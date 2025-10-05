@@ -698,5 +698,105 @@
     "lat": -13.3297,
     "lng": -72.1967,
     "category": "Archaeological"
+  },
+  {
+    "id": 71,
+    "region": "Huancavelica",
+    "name": "Santa Barbara Mines",
+    "description": "Historic mercury mines that operated from the 16th to 19th centuries, playing a crucial role in silver production during the colonial period. Features underground tunnels and mining infrastructure.",
+    "image": "https://images.unsplash.com/photo-1574289197505-47e373ff8c87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.7833,
+    "lng": -74.9667,
+    "category": "Cultural"
+  },
+  {
+    "id": 72,
+    "region": "Huancavelica",
+    "name": "Baths of San Cristóbal",
+    "description": "Natural thermal springs with therapeutic properties, located in a scenic highland setting. The mineral-rich waters have been used for centuries for their healing benefits.",
+    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.7833,
+    "lng": -74.9833,
+    "category": "Natural"
+  },
+  {
+    "id": 73,
+    "region": "Huancavelica",
+    "name": "Huancavelica Cathedral",
+    "description": "Beautiful colonial church built in Baroque style with indigenous influences. Features intricate stonework and important religious art from the 17th century.",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.7861,
+    "lng": -74.9753,
+    "category": "Cultural"
+  },
+  {
+    "id": 74,
+    "region": "Huancavelica",
+    "name": "Uchkus Inkañan Archaeological Site",
+    "description": "Inca archaeological complex featuring agricultural terraces, ceremonial platforms, and astronomical observatories. The site demonstrates advanced Inca engineering and agricultural knowledge.",
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.7167,
+    "lng": -75.0833,
+    "category": "Archaeological"
+  },
+  {
+    "id": 75,
+    "region": "Huancavelica",
+    "name": "Lake Choclococha",
+    "description": "Large high-altitude lake surrounded by dramatic Andean scenery. Important for local wildlife and traditional fishing communities, offering opportunities for birdwatching and hiking.",
+    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -13.1833,
+    "lng": -75.1333,
+    "category": "Natural"
+  },
+  {
+    "id": 76,
+    "region": "Huancavelica",
+    "name": "San Antonio de Cusicancha Church",
+    "description": "Historic colonial church featuring Mudejar-style architecture and beautiful interior decorations. Represents the fusion of Spanish and indigenous artistic traditions.",
+    "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.8,
+    "lng": -75.0,
+    "category": "Cultural"
+  },
+  {
+    "id": 77,
+    "region": "Huancavelica",
+    "name": "Pampa Galeras National Reserve",
+    "description": "Protected area dedicated to the conservation of vicuñas, featuring high-altitude grasslands and unique Andean ecosystems. Offers wildlife viewing and spectacular mountain landscapes.",
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -14.6667,
+    "lng": -74.6667,
+    "category": "Natural"
+  },
+  {
+    "id": 78,
+    "region": "Huancavelica",
+    "name": "Inca Wasi Archaeological Complex",
+    "description": "Important Inca administrative center featuring stone structures, storage facilities, and ceremonial areas. The site offers insights into Inca governance and regional organization.",
+    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.9,
+    "lng": -75.2333,
+    "category": "Archaeological"
+  },
+  {
+    "id": 79,
+    "region": "Huancavelica",
+    "name": "Marcavalle Hot Springs",
+    "description": "Natural thermal springs located in a picturesque valley, featuring multiple pools with mineral-rich waters. Popular for relaxation and traditional healing practices.",
+    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -12.7167,
+    "lng": -74.9167,
+    "category": "Natural"
+  },
+  {
+    "id": 80,
+    "region": "Huancavelica",
+    "name": "Huaytará Archaeological Complex",
+    "description": "Extensive pre-Inca and Inca archaeological site featuring stone structures, tombs, and ceremonial platforms. Demonstrates the architectural evolution of ancient Andean cultures.",
+    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "lat": -13.5667,
+    "lng": -75.2167,
+    "category": "Archaeological"
   }
 ]
