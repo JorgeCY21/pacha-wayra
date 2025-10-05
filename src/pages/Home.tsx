@@ -10,10 +10,10 @@ import WindChart from "../components/WindChart";
 import WeatherChatbot from "../components/WeatherChatbot"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Leaf, Sun, Mountain, Sparkles, Compass, AlertTriangle, Calendar } from "lucide-react"
+import { Leaf, Sun, Mountain, Sparkles, AlertTriangle, Calendar } from "lucide-react"
 
 function Home() {
-  const [region, setRegion] = useState("Cusco")
+  const [region, setRegion] = useState("Arequipa")
   const [selectedDate, setSelectedDate] = useState(new Date())
 
   return (
@@ -86,15 +86,6 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
           >
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/30">
-              <div className="flex items-center gap-3">
-                <Compass className="text-cyan-300" size={24} />
-                <div className="text-left">
-                  <p className="text-sm text-emerald-200">Exploring Region</p>
-                  <p className="text-lg font-bold text-white">{region}</p>
-                </div>
-              </div>
-            </div>
             
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/30">
               <div className="flex items-center gap-3">

@@ -1,100 +1,127 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
-import sitesData from '../data/tourist_sites.json'
+import { useEffect, useRef } from "react";
+import "ol/ol.css";
+import Map from "ol/Map";
+import View from "ol/View";
+import TileLayer from "ol/layer/Tile";
+import VectorLayer from "ol/layer/Vector";
+import OSM from "ol/source/OSM";
+import VectorSource from "ol/source/Vector";
+import { fromLonLat, toLonLat } from "ol/proj";
+import { Style, Circle as CircleStyle, Fill, Stroke } from "ol/style";
+import Feature from "ol/Feature";
+import Point from "ol/geom/Point";
 
-interface Props {
-  region: string
-  date: Date
+interface MapViewProps {
+  region: string;
+  date: Date;
 }
 
-function MapView({ region, date }: Props) {
-  const sites = (sitesData as any).filter((s: any) => s.region === region)
+const MapView: React.FC<MapViewProps> = ({ region, date }) => {
+  const mapRef = useRef<HTMLDivElement | null>(null);
 
-  // Get seasonal info for map popups
-  const getSeasonalInfo = (selectedDate: Date) => {
-    const month = selectedDate.getMonth();
-    const daysFromNow = Math.ceil((selectedDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
-    
-    const season = getSeason(month);
-    const isRainySeason = month >= 11 || month <= 3;
-    const isWinter = month >= 5 && month <= 9;
-    
-    return {
-      season,
-      isRainySeason,
-      isWinter,
-      daysFromNow,
-      weatherNote: isRainySeason ? 'Rainy season - pack accordingly' : 
-                   isWinter ? 'Cooler temperatures expected' : 
-                   'Ideal dry season conditions'
+  useEffect(() => {
+    if (!mapRef.current) return;
+
+    const baseLayer = new TileLayer({ source: new OSM() });
+
+    const resultSource = new VectorSource();
+    const resultLayer = new VectorLayer({
+      source: resultSource,
+      style: new Style({
+        image: new CircleStyle({
+          radius: 6,
+          fill: new Fill({ color: "#1976d2" }),
+          stroke: new Stroke({ color: "#fff", width: 2 }),
+        }),
+      }),
+    });
+
+    const map = new Map({
+      target: mapRef.current,
+      layers: [baseLayer, resultLayer],
+      view: new View({
+        center: fromLonLat([-75.0152, -9.19]), // Perú
+        zoom: 6,
+      }),
+    });
+
+    const buscar = async () => {
+      const input = document.getElementById("search") as HTMLInputElement | null;
+      if (!input) return;
+      const q = input.value.trim();
+      if (!q) return;
+
+      const url = `https://nominatim.openstreetmap.org/search?format=json&limit=5&accept-language=es&countrycodes=pe&q=${encodeURIComponent(
+        q
+      )}`;
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!data || data.length === 0) {
+          alert("No se encontraron resultados en Perú.");
+          return;
+        }
+
+        resultSource.clear();
+        const lon = parseFloat(data[0].lon);
+        const lat = parseFloat(data[0].lat);
+
+        alert(`📍 Resultado encontrado:\nLat: ${lat.toFixed(6)}\nLon: ${lon.toFixed(6)}`);
+
+        const feat = new Feature({
+          geometry: new Point(fromLonLat([lon, lat])),
+          name: data[0].display_name,
+        });
+        resultSource.addFeature(feat);
+        map.getView().animate({ center: fromLonLat([lon, lat]), zoom: 12 });
+      } catch (err) {
+        console.error("Error al buscar:", err);
+      }
     };
-  };
 
-  const getSeason = (month: number) => {
-    if (month >= 11 || month <= 2) return 'summer';
-    if (month >= 3 && month <= 5) return 'autumn';
-    if (month >= 6 && month <= 8) return 'winter';
-    return 'spring';
-  };
+    const btn = document.getElementById("btnSearch");
+    const input = document.getElementById("search") as HTMLInputElement | null;
+    btn?.addEventListener("click", buscar);
+    input?.addEventListener("keydown", (e: KeyboardEvent) => {
+      if (e.key === "Enter") buscar();
+    });
+
+    map.on("singleclick", (evt) => {
+      const coord = toLonLat(evt.coordinate);
+      alert(`📍 Coordenadas seleccionadas:\nLat: ${coord[1].toFixed(6)}\nLon: ${coord[0].toFixed(6)}`);
+      resultSource.clear();
+      const feat = new Feature({
+        geometry: new Point(evt.coordinate),
+      });
+      resultSource.addFeature(feat);
+    });
+
+    return () => {
+      btn?.removeEventListener("click", buscar);
+      map.setTarget(undefined);
+    };
+  }, [region, date]);
 
   return (
-    <div className="h-96 rounded-2xl overflow-hidden shadow">
-      {/* Map Header */}
-    
-      <MapContainer
-        center={[-9.19, -75.0152] as [number, number]}
-        zoom={6}
-        style={{ height: '100%', width: '100%' }}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    <div className="flex flex-col h-[380px] w-full rounded-2xl overflow-hidden shadow">
+      <div className="flex gap-2 p-2 bg-gray-100 border-b border-gray-300">
+        <input
+          id="search"
+          type="text"
+          placeholder="Buscar lugar o ciudad..."
+          className="flex-1 p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-
-        {sites.map((site: any) => {
-          const siteSeasonalInfo = getSeasonalInfo(date);
-          const getWeatherIcon = () => {
-            if (siteSeasonalInfo.isRainySeason) return '🌧️';
-            if (siteSeasonalInfo.isWinter) return '❄️';
-            return '☀️';
-          };
-
-          return (
-            <Marker key={site.id} position={[site.lat, site.lng] as [number, number]}>
-              <Popup>
-                <div className="min-w-[200px]">
-                  <div className="flex items-start justify-between mb-2">
-                    <strong className="text-lg">{site.name}</strong>
-                    <span className="text-2xl">{getWeatherIcon()}</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-2">{site.description}</p>
-                  <div className="space-y-1 text-xs">
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium">Region:</span>
-                      <span>{site.region}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium">Season:</span>
-                      <span className="capitalize">{siteSeasonalInfo.season}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium">Forecast:</span>
-                      <span>{siteSeasonalInfo.weatherNote}</span>
-                    </div>
-                    {siteSeasonalInfo.daysFromNow > 30 && (
-                      <div className="text-orange-600 font-medium">
-                        Long-term forecast - check updates
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </Popup>
-            </Marker>
-          );
-        })}
-      </MapContainer>
+        <button
+          id="btnSearch"
+          className="px-3 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-800 transition-colors"
+        >
+          Buscar
+        </button>
+      </div>
+      <div ref={mapRef} className="flex-1 w-full h-full" />
     </div>
-  )
-}
+  );
+};
 
-export default MapView
+export default MapView;
