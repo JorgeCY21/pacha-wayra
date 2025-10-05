@@ -25,7 +25,7 @@ function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1575408264798-b50b252663e6?auto=format&fit=crop&q=80')] bg-cover bg-center scale-105" />
+        <div className="absolute inset-0 bg-[url('https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f2/64/89.jpg')] bg-cover bg-center scale-105" />
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-teal-800/70 to-cyan-900/80" />
         
         {/* Floating particles */}
