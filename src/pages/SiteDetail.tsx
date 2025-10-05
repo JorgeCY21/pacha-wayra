@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, MapPin, Calendar, Utensils, Activity, Sun, CloudRain, Snowflake } from 'lucide-react'
 import sitesData from '../data/tourist_sites.json'
 import weatherData from '../data/weather.json'
+import departmentData from '../data/departments.json'
 
 function SiteDetail() {
   const { id } = useParams()
@@ -65,124 +66,35 @@ function SiteDetail() {
 
   const weather = getSiteWeather(site, selectedDate)
 
-  // Get activities based on weather and location type
+  // Get food recommendations based on region and weather
+  // Función getActivities actualizada
   const getActivities = (site: any, weather: any) => {
-    const baseActivities = []
+    const departmentInfo = departmentData.find((d: any) => d.department === site.region)
+    if (!departmentInfo) {
+      // Fallback activities si no encuentra el departamento
+      return ['Cultural tours', 'Local exploration', 'Photography', 'Sightseeing']
+    }
+    
     const temp = weather?.temperature || 20
+    const isHot = temp > 20
+    const activities = isHot ? departmentInfo.hot.activities : departmentInfo.cold.activities
     
-    // Cultural activities (always available)
-    baseActivities.push(
-      'Visit local museums',
-      'Explore cultural centers',
-      'Photography tour',
-      'Local market shopping'
-    )
-    
-    // Weather-specific activities
-    if (temp > 20) {
-      baseActivities.push(
-        'Outdoor dining',
-        'Sunset viewing',
-        'Walking tours',
-        'Park visits'
-      )
-    }
-    
-    if (temp > 25 && !site.category?.includes('Mountain')) {
-      baseActivities.push(
-        'Boating activities',
-        'Swimming',
-        'Picnics'
-      )
-    }
-    
-    if (temp < 15 || site.category?.includes('Mountain')) {
-      baseActivities.push(
-        'Hot springs visit',
-        'Indoor museums',
-        'Cafe hopping',
-        'Cooking classes'
-      )
-    }
-    
-    // Site-type specific activities
-    if (site.category === 'Archaeological') {
-      baseActivities.push(
-        'Ruins exploration',
-        'Historical guided tours',
-        'Ancient architecture photography'
-      )
-    }
-    
-    if (site.category === 'Beach' || site.category === 'Coastal') {
-      baseActivities.push(
-        'Beach walking',
-        'Seafood tasting',
-        'Water sports',
-        'Coastal hiking'
-      )
-    }
-    
-    if (site.category === 'Mountain') {
-      baseActivities.push(
-        'Mountain viewing',
-        'Hiking trails',
-        'Wildlife spotting',
-        'Scenic photography'
-      )
-    }
-    
-    return baseActivities.slice(0, 8) // Limit to 8 activities
+    return activities.slice(0, 8)
   }
 
-  // Get food recommendations based on region and weather
+  // Función getFoodRecommendations actualizada
   const getFoodRecommendations = (site: any, weather: any) => {
+    const departmentInfo = departmentData.find((d: any) => d.department === site.region)
+    if (!departmentInfo) {
+      // Fallback foods si no encuentra el departamento
+      return ['Local cuisine', 'Traditional dishes', 'Regional specialties']
+    }
+    
     const temp = weather?.temperature || 20
-    const foods = []
+    const isHot = temp > 20
+    const foods = isHot ? departmentInfo.hot.foods : departmentInfo.cold.foods
     
-    // Base regional foods for Peru
-    const peruvianFoods = [
-      'Ceviche',
-      'Lomo Saltado',
-      'Aji de Gallina',
-      'Rocoto Relleno',
-      'Anticuchos',
-      'Papa a la Huancaina'
-    ]
-    
-    // Weather-appropriate foods
-    if (temp < 15) {
-      foods.push(
-        'Hot soups and stews',
-        'Grilled meats',
-        'Hot beverages',
-        'Hearty potato dishes'
-      )
-    }
-    
-    if (temp > 22) {
-      foods.push(
-        'Fresh seafood',
-        'Cold salads',
-        'Refreshing drinks',
-        'Light appetizers'
-      )
-    }
-    
-    // Regional specialties
-    if (site.region === 'Cusco') {
-      foods.push('Cuy (Guinea Pig)', 'Chicha Morada', 'Alpaca dishes')
-    }
-    
-    if (site.region === 'Arequipa') {
-      foods.push('Rocoto Relleno', 'Adobo Arequipeño', 'Queso Helado')
-    }
-    
-    if (site.region === 'Lima') {
-      foods.push('Fresh ceviche', 'Causa Limeña', 'Pisco Sour')
-    }
-    
-    return [...new Set([...peruvianFoods, ...foods])].slice(0, 8)
+    return foods.slice(0, 8)
   }
 
   // Get packing recommendations
