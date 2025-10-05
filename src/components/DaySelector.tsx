@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Calendar, ChevronLeft, ChevronRight, Sun, Cloud, CloudRain, Snowflake } from 'lucide-react';
 
 interface DaySelectorProps {

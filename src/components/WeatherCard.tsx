@@ -1,18 +1,60 @@
 import weatherData from '../data/weather.json'
-import { Thermometer, Wind, Gauge, Droplets, CloudRain, Snowflake, WindIcon } from 'lucide-react'
+import { Thermometer, Wind, Gauge, Droplets, CloudRain, Snowflake, WindIcon, Calendar } from 'lucide-react'
 
 interface Props {
   region: string
+  date: Date
 }
 
-function WeatherCard({ region }: Props) {
-  const data = (weatherData as any).find((w: any) => w.region === region)
+function WeatherCard({ region, date }: Props) {
+  // Find base weather data for the region
+  const baseData = (weatherData as any).find((w: any) => w.region === region)
 
-  if (!data) return (
+  if (!baseData) return (
     <div className="text-center py-8">
       <p className="text-gray-500">No weather data available for {region}</p>
     </div>
   )
+
+  // Calculate future weather based on date (this is simulated - you'll need real forecast data)
+  const getFutureWeather = (baseData: any, selectedDate: Date) => {
+    const today = new Date();
+    const daysDiff = Math.ceil((selectedDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+    
+    // Simulate seasonal variations for demonstration
+    const month = selectedDate.getMonth();
+    const isRainySeason = month >= 11 || month <= 3; // Dec-Mar in Peru
+    const isWinter = month >= 5 && month <= 9; // Jun-Sep in highlands
+    
+    let temperature = baseData.temperature;
+    let forecast = baseData.forecast;
+    
+    // Adjust temperature based on season and days ahead
+    if (isWinter) {
+      temperature -= 3 + (daysDiff * 0.1); // Colder in winter, more uncertainty further out
+    } else if (isRainySeason) {
+      temperature += 2;
+      forecast = 'rainy';
+    }
+    
+    // Add some randomness for future dates
+    const randomVariation = (Math.random() - 0.5) * (daysDiff * 0.2);
+    temperature += randomVariation;
+    
+    return {
+      temperature: Math.round(temperature),
+      forecast,
+      humidity: Math.max(30, Math.min(90, baseData.humidity + (isRainySeason ? 15 : 0))),
+      windSpeed: `${Math.round(8 + (daysDiff * 0.1))} km/h`,
+      pressure: `${1010 + Math.round((Math.random() - 0.5) * 10)} hPa`,
+      rain: isRainySeason ? `${Math.round(40 + (Math.random() * 40))}%` : `${Math.round(10 + (Math.random() * 20))}%`,
+      snow: isWinter ? `${Math.round(Math.random() * 30)}%` : '0%',
+      dust: daysDiff > 30 ? 'Moderate' : 'Low'
+    };
+  };
+
+  const weatherDetails = getFutureWeather(baseData, date);
+  const daysFromNow = Math.ceil((date.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
 
   const getWeatherIcon = (forecast: string) => {
     switch(forecast.toLowerCase()) {
@@ -26,102 +68,113 @@ function WeatherCard({ region }: Props) {
     }
   }
 
-  // Datos de ejemplo para los nuevos campos (deberás actualizar tu JSON)
-  const weatherDetails = {
-    temperature: data.temperature,
-    windSpeed: data.windSpeed || '15 km/h', // Ejemplo
-    pressure: data.pressure || '1013 hPa', // Ejemplo
-    humidity: data.humidity,
-    rain: data.rain || '30%', // Ejemplo
-    snow: data.snow || '0%', // Ejemplo
-    dust: data.dust || 'Low' // Ejemplo
-  }
+  const getConfidenceLevel = (daysAhead: number) => {
+    if (daysAhead <= 3) return { level: 'High', color: 'text-green-600', bg: 'bg-green-100' };
+    if (daysAhead <= 7) return { level: 'Medium', color: 'text-yellow-600', bg: 'bg-yellow-100' };
+    return { level: 'Low', color: 'text-orange-600', bg: 'bg-orange-100' };
+  };
+
+  const confidence = getConfidenceLevel(daysFromNow);
 
   return (
     <div className="space-y-4">
-      {/* Header */}
-      <div className="flex items-center gap-3">
-        <div className="p-2 bg-cyan-100 rounded-xl">
-          <Thermometer className="text-cyan-600" size={24} />
+      {/* Header with Date Info */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-cyan-100 rounded-xl">
+            <Thermometer className="text-cyan-600" size={24} />
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-gray-800">Weather Forecast</h2>
+            <p className="text-sm text-gray-600 flex items-center gap-1">
+              <Calendar size={14} />
+              {date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+            </p>
+          </div>
         </div>
-        <h2 className="text-xl font-bold text-gray-800">Weather in {region}</h2>
+        <div className={`px-3 py-1 rounded-full text-xs font-semibold ${confidence.bg} ${confidence.color}`}>
+          {confidence.level} Confidence
+        </div>
       </div>
       
-      {/* Temperatura Principal y Icono */}
+      {/* Main Temperature and Icon */}
       <div className="flex items-center justify-between bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-4">
         <div className="text-4xl">
-          {getWeatherIcon(data.forecast)}
+          {getWeatherIcon(weatherDetails.forecast)}
         </div>
         <div className="text-right">
           <div className="text-3xl font-bold text-gray-800">{weatherDetails.temperature}°C</div>
-          <div className="text-sm text-gray-600 capitalize">{data.forecast}</div>
+          <div className="text-sm text-gray-600 capitalize">{weatherDetails.forecast}</div>
+          <div className="text-xs text-gray-500 mt-1">
+            {daysFromNow === 0 ? 'Today' : `${daysFromNow} day${daysFromNow !== 1 ? 's' : ''} from now`}
+          </div>
         </div>
       </div>
 
-      {/* Grid de Métricas Detalladas */}
+      {/* Detailed Metrics Grid */}
       <div className="grid grid-cols-2 gap-3">
-        {/* Viento */}
+        {/* Wind */}
         <div className="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
           <div className="p-2 bg-blue-100 rounded-lg">
             <Wind size={18} className="text-blue-600" />
           </div>
           <div>
-            <div className="text-xs text-gray-500 font-medium">VIENTO</div>
+            <div className="text-xs text-gray-500 font-medium">WIND</div>
             <div className="text-sm font-semibold text-gray-800">{weatherDetails.windSpeed}</div>
           </div>
         </div>
 
-        {/* Presión Atmosférica */}
+        {/* Pressure */}
         <div className="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
           <div className="p-2 bg-purple-100 rounded-lg">
             <Gauge size={18} className="text-purple-600" />
           </div>
           <div>
-            <div className="text-xs text-gray-500 font-medium">PRESIÓN</div>
+            <div className="text-xs text-gray-500 font-medium">PRESSURE</div>
             <div className="text-sm font-semibold text-gray-800">{weatherDetails.pressure}</div>
           </div>
         </div>
 
-        {/* Humedad */}
+        {/* Humidity */}
         <div className="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
           <div className="p-2 bg-cyan-100 rounded-lg">
             <Droplets size={18} className="text-cyan-600" />
           </div>
           <div>
-            <div className="text-xs text-gray-500 font-medium">HUMEDAD</div>
+            <div className="text-xs text-gray-500 font-medium">HUMIDITY</div>
             <div className="text-sm font-semibold text-gray-800">{weatherDetails.humidity}%</div>
           </div>
         </div>
 
-        {/* Lluvia */}
+        {/* Rain */}
         <div className="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
           <div className="p-2 bg-blue-100 rounded-lg">
             <CloudRain size={18} className="text-blue-600" />
           </div>
           <div>
-            <div className="text-xs text-gray-500 font-medium">LLUVIA</div>
+            <div className="text-xs text-gray-500 font-medium">RAIN</div>
             <div className="text-sm font-semibold text-gray-800">{weatherDetails.rain}</div>
           </div>
         </div>
 
-        {/* Nieve */}
+        {/* Snow */}
         <div className="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
           <div className="p-2 bg-cyan-100 rounded-lg">
             <Snowflake size={18} className="text-cyan-600" />
           </div>
           <div>
-            <div className="text-xs text-gray-500 font-medium">NIEVE</div>
+            <div className="text-xs text-gray-500 font-medium">SNOW</div>
             <div className="text-sm font-semibold text-gray-800">{weatherDetails.snow}</div>
           </div>
         </div>
 
-        {/* Polvo */}
+        {/* Dust */}
         <div className="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
           <div className="p-2 bg-amber-100 rounded-lg">
             <WindIcon size={18} className="text-amber-600" />
           </div>
           <div>
-            <div className="text-xs text-gray-500 font-medium">POLVO</div>
+            <div className="text-xs text-gray-500 font-medium">DUST</div>
             <div className="text-sm font-semibold text-gray-800">{weatherDetails.dust}</div>
           </div>
         </div>

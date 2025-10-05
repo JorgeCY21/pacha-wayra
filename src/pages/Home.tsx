@@ -7,10 +7,11 @@ import SearchFilter from "../components/SearchFilter"
 import MapView from "../components/MapView"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Leaf, Sun, Mountain, Sparkles, Compass, AlertTriangle } from "lucide-react"
+import { Leaf, Sun, Mountain, Sparkles, Compass, AlertTriangle, Calendar } from "lucide-react"
 
 function Home() {
   const [region, setRegion] = useState("Cusco")
+  const [selectedDate, setSelectedDate] = useState(new Date())
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 pb-10">
@@ -24,7 +25,7 @@ function Home() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1575408264798-b50b252663e6?auto=format&fit=crop&q=80')] bg-cover bg-center scale-105" />
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-teal-800/70 to-cyan-900/80" />
         
-        {/* Partículas decorativas */}
+        {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(15)].map((_, i) => (
             <motion.div
@@ -55,7 +56,7 @@ function Home() {
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/30"
           >
             <Sparkles size={20} className="text-yellow-300" />
-            <span className="font-semibold">Explore Peru Like Never Before</span>
+            <span className="font-semibold">Future Weather Forecasts for Peru</span>
           </motion.div>
 
           <motion.h1 
@@ -73,7 +74,7 @@ function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            Your intelligent guide to Peru's climate, culture, and natural wonders
+            Plan your perfect trip with accurate weather forecasts up to 6 months ahead
           </motion.p>
 
           <motion.div
@@ -92,6 +93,22 @@ function Home() {
               </div>
             </div>
             
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/30">
+              <div className="flex items-center gap-3">
+                <Calendar className="text-cyan-300" size={24} />
+                <div className="text-left">
+                  <p className="text-sm text-emerald-200">Selected Date</p>
+                  <p className="text-lg font-bold text-white">
+                    {selectedDate.toLocaleDateString('en-US', { 
+                      month: 'short', 
+                      day: 'numeric',
+                      year: 'numeric'
+                    })}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
               <SearchFilter onRegionChange={setRegion} />
             </div>
@@ -99,22 +116,62 @@ function Home() {
         </div>
       </motion.section>
 
-      {/* 🎯 Main Content - Layout Mejorado */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+      {/* 🗓️ Future Weather Selector */}
+      <motion.div
+        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="bg-white rounded-3xl p-6 shadow-2xl border border-emerald-100">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-emerald-800 flex items-center justify-center gap-3">
+              <Calendar className="text-emerald-600" size={28} />
+              Select Your Travel Date
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Choose any date within the next 6 months for accurate weather forecasting
+            </p>
+          </div>
+          <DaySelector 
+            selectedDate={selectedDate}
+            onDateSelect={setSelectedDate}
+          />
+        </div>
+      </motion.div>
+
+      {/* 🎯 Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         
-        {/* Sección Superior: Información Rápida */}
+        {/* Weather Forecast Summary */}
         <motion.div
           className="grid lg:grid-cols-3 gap-6 mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.6 }}
         >
-          {/* Weather Card */}
+          {/* Future Weather Card */}
           <motion.div
             className="bg-white rounded-2xl p-6 shadow-xl border border-cyan-100 hover:shadow-2xl transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <WeatherCard region={region} />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-cyan-100 rounded-xl">
+                <Calendar className="text-cyan-600" size={24} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">Weather Forecast</h3>
+                <p className="text-sm text-gray-600">
+                  {selectedDate.toLocaleDateString('en-US', { 
+                    weekday: 'long',
+                    month: 'long', 
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </p>
+              </div>
+            </div>
+            <WeatherCard region={region} date={selectedDate} />
           </motion.div>
 
           {/* Recommendations */}
@@ -122,7 +179,7 @@ function Home() {
             className="bg-white rounded-2xl p-6 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <Recommendations region={region} />
+            <Recommendations region={region} date={selectedDate} />
           </motion.div>
 
           {/* Alerts */}
@@ -130,19 +187,19 @@ function Home() {
             className="bg-white rounded-2xl p-6 shadow-xl border border-amber-100 hover:shadow-2xl transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <Alerts region={region} />
+            <Alerts region={region} date={selectedDate} />
           </motion.div>
         </motion.div>
 
-        {/* 🏞️ Sección Principal: Turismo y Mapa */}
+        {/* 🏞️ Tourism Section */}
         <div className="grid xl:grid-cols-3 gap-8">
           
-          {/* Columna de Turismo - Ahora más ancha */}
+          {/* Tourism Column */}
           <motion.div
             className="xl:col-span-2"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.8 }}
           >
             <div className="bg-white rounded-3xl p-8 shadow-2xl border border-teal-100">
               <div className="flex items-center gap-3 mb-8">
@@ -150,46 +207,71 @@ function Home() {
                   <Leaf className="text-teal-600" size={28} />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-teal-800">Must-Visit Places in {region}</h2>
-                  <p className="text-teal-600">Discover the most amazing destinations</p>
+                  <h2 className="text-3xl font-bold text-teal-800">
+                    Best Time to Visit in {region}
+                  </h2>
+                  <p className="text-teal-600">
+                    Tourist sites and optimal visiting conditions for your selected date
+                  </p>
                 </div>
               </div>
-              <TouristList region={region} />
+              <TouristList region={region} date={selectedDate} />
             </div>
           </motion.div>
 
-          {/* Sidebar con Mapa y Info Adicional */}
+          {/* Sidebar with Map and Additional Info */}
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 1.0 }}
           >
-            {/* Mapa Interactivo */}
+            {/* Interactive Map */}
             <div className="bg-white rounded-3xl shadow-2xl border border-emerald-100 overflow-hidden">
               <div className="p-6 pb-4">
                 <h3 className="text-xl font-bold text-emerald-800 flex items-center gap-3">
                   <div className="p-2 bg-emerald-100 rounded-xl">
                     <Mountain className="text-emerald-600" size={20} />
                   </div>
-                  Interactive Map
+                  Regional Map
                 </h3>
+                <p className="text-sm text-gray-600 mt-1">
+                  Weather conditions and attractions in {region}
+                </p>
               </div>
-              <MapView region={region} />
+              <MapView region={region} date={selectedDate} />
             </div>
 
-            {/* Información Adicional */}
+            {/* Travel Tips */}
             <div className="bg-gradient-to-br from-cyan-500 to-emerald-600 rounded-3xl p-6 text-white shadow-2xl">
               <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
                 <AlertTriangle size={20} className="text-yellow-300" />
-                Travel Tips
+                Planning Tips
               </h3>
               <ul className="space-y-2 text-sm">
-                <li>• Stay hydrated at high altitudes</li>
-                <li>• Respect local customs and traditions</li>
-                <li>• Keep emergency contacts handy</li>
-                <li>• Check weather updates regularly</li>
+                <li>• Check weather forecasts 1-2 weeks before travel</li>
+                <li>• Pack layers for changing mountain conditions</li>
+                <li>• Monitor weather alerts for your travel dates</li>
+                <li>• Consider altitude effects on weather perception</li>
+                <li>• Have backup plans for outdoor activities</li>
               </ul>
+            </div>
+
+            {/* Date Context */}
+            <div className="bg-white rounded-2xl p-4 shadow-lg border border-amber-100">
+              <div className="text-center">
+                <p className="text-sm text-gray-600">Planning for</p>
+                <p className="font-bold text-amber-700 text-lg">
+                  {selectedDate.toLocaleDateString('en-US', { 
+                    month: 'long', 
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  {Math.ceil((selectedDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} days from now
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -200,18 +282,18 @@ function Home() {
         className="max-w-4xl mx-auto mt-16 text-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 1.2 }}
       >
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-emerald-100">
           <p className="text-2xl font-bold text-emerald-800 flex items-center justify-center gap-3 mb-4">
             <Sun size={28} className="text-amber-500" />
-            Begin Your Adventure With 
+            Plan Your Perfect Journey With 
             <span className="bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
               PachaWayra
             </span>
           </p>
           <p className="text-gray-600">
-            From the majestic Andes to the vibrant Amazon, your perfect journey starts here.
+            From the majestic Andes to the vibrant Amazon, plan with confidence using our future weather forecasts.
           </p>
         </div>
       </motion.div>
