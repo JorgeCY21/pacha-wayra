@@ -6,7 +6,7 @@ import SearchFilter from "../components/SearchFilter"
 import MapView from "../components/MapView"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Leaf, Sun, MapPin, Mountain, Sparkles, Compass, AlertTriangle } from "lucide-react"
+import { Leaf, Sun, Mountain, Sparkles, Compass, AlertTriangle } from "lucide-react"
 
 function Home() {
   const [region, setRegion] = useState("Cusco")
