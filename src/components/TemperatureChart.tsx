@@ -14,7 +14,6 @@ interface TemperatureChartProps {
 function TemperatureChart({ region, date }: TemperatureChartProps) {
   const generateTemperatureData = (): TemperatureData[] => {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const baseDate = new Date(date);
 
     return days.map((day, index) => {
       const baseTemp = region.toLowerCase().includes('cusco') ? 15 : 

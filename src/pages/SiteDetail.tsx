@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, MapPin, Calendar, Utensils, Activity, Sun, CloudRain, Snowflake } from 'lucide-react'
+import { ArrowLeft, MapPin, Calendar, Utensils, Activity} from 'lucide-react'
 import sitesData from '../data/tourist_sites.json'
 import weatherData from '../data/weather.json'
 import departmentData from '../data/departments.json'
@@ -10,7 +10,7 @@ import WeatherChatbot from '../components/WeatherChatbot'; // Añade esta import
 
 function SiteDetail() {
   const { id } = useParams()
-  const [selectedDate, setSelectedDate] = useState(new Date())
+  const [selectedDate] = useState(new Date())
   
   const site = (sitesData as any).find((s: any) => String(s.id) === id)  
   
@@ -342,7 +342,6 @@ function SiteDetail() {
       <WeatherChatbot 
         region={site.name}
         date={selectedDate}
-        weatherCondition={weather?.forecast}
         touristSite={site.name}
       />
     </div>

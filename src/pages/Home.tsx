@@ -299,7 +299,6 @@ function Home() {
       <WeatherChatbot 
         region={region}
         date={selectedDate}
-        weatherCondition="sunny" // Esto vendría de tu API de clima
       />
     </div>
   )

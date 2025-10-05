@@ -1,7 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import sitesData from '../data/tourist_sites.json'
-import { Calendar, Sun, CloudRain, Snowflake } from 'lucide-react'
 
 interface Props {
   region: string
@@ -37,8 +36,6 @@ function MapView({ region, date }: Props) {
     if (month >= 6 && month <= 8) return 'winter';
     return 'spring';
   };
-
-  const seasonalInfo = getSeasonalInfo(date);
 
   return (
     <div className="h-96 rounded-2xl overflow-hidden shadow">

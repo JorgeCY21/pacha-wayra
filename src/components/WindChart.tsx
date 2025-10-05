@@ -14,7 +14,6 @@ interface WindChartProps {
 function WindChart({ region, date }: WindChartProps) {
   const generateWindData = (): WindData[] => {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const baseDate = new Date(date);
 
     return days.map((day, index) => {
       // Simulación de velocidad del viento según la región

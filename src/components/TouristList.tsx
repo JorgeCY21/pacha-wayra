@@ -44,7 +44,6 @@ function TouristList({ region, date }: Props) {
 
   const getWeatherSuitability = (month: number, category: string) => {
     const isRainy = month >= 11 || month <= 3;
-    const isCold = month >= 5 && month <= 9;
     
     if (category === 'Beach' && isRainy) return 'poor';
     if (category === 'Mountain' && isRainy) return 'fair';
