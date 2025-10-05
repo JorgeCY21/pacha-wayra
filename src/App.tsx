@@ -7,16 +7,17 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#f0fdfa] via-[#e0f7fa] to-[#e0f2fe] text-slate-800 font-sans">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       <Header />
 
-      <main className="flex-grow max-w-5xl mx-auto pt-28 px-6">
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/favorites" element={<Favorites />} />
-    <Route path="/site/:id" element={<SiteDetail />} />
-  </Routes>
-</main>
+      {/* Main content sin limitación de ancho para que el diseño épico fluya */}
+      <main className="flex-grow pt-24"> {/* pt-24 para el header fixed */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/site/:id" element={<SiteDetail />} />
+        </Routes>
+      </main>
 
       <Footer />
     </div>
