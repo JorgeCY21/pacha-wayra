@@ -5,6 +5,8 @@ import Alerts from "../components/Alerts"
 import TouristList from "../components/TouristList"
 import SearchFilter from "../components/SearchFilter"
 import MapView from "../components/MapView"
+import TemperatureChart from "../components/TemperatureChart";
+import WindChart from "../components/WindChart";
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Leaf, Sun, Mountain, Sparkles, Compass, AlertTriangle, Calendar } from "lucide-react"
@@ -224,6 +226,18 @@ function Home() {
                 </p>
               </div>
               <MapView region={region} date={selectedDate} />
+
+              
+            </div>
+
+            {/* Temperature Chart */}
+            <div className="bg-white rounded-3xl shadow-2xl border border-cyan-100 overflow-hidden">
+              <TemperatureChart region={region} date={selectedDate} />
+            </div>
+            
+            {/* WindChart Chart */}
+            <div className="bg-white rounded-3xl shadow-2xl border border-cyan-100 overflow-hidden">
+              <WindChart region={region} date={selectedDate} />
             </div>
 
             {/* Travel Tips */}
