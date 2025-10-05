@@ -2,7 +2,32 @@ interface Props {
   onRegionChange: (region: string) => void
 }
 
-const regions = ['Cusco', 'Arequipa', 'Puno', 'Lima', 'Iquitos', 'Trujillo', 'Ica', 'Huarez']
+const regions = [
+  'Amazonas',
+  'Ancash',
+  'Apurímac',
+  'Arequipa',
+  'Ayacucho',
+  'Cajamarca',
+  'Cusco',
+  'Huancavelica',
+  'Huanuco',
+  'Ica',
+  'Junín',
+  'La Libertad',
+  'Lambayeque',
+  'Lima',
+  'Loreto',
+  'Madre de Dios',
+  'Moquegua',
+  'Pasco',
+  'Piura',
+  'Puno',
+  'San Martín',
+  'Tacna',
+  'Tumbes',
+  'Ucayali'
+];
 
 function SearchFilter({ onRegionChange }: Props) {
   return (
