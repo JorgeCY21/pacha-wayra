@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import sitesData from '../data/tourist_sites.json'
-import { MapPin, Star, Calendar, Sun, CloudRain, Snowflake } from 'lucide-react'
+import { MapPin, Star, Calendar, Sun, CloudRain } from 'lucide-react'
 
 interface Props {
   region: string
@@ -103,7 +103,7 @@ function TouristList({ region, date }: Props) {
             <Link
               key={site.id}
               to={`/site/${site.id}`}
-              className="group bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 hover:scale-[1.02]"
+              className="group bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 hover:scale-[1.02] block" // ← AGREGAR 'block' AQUÍ
             >
               <div className="relative overflow-hidden rounded-xl mb-4">
                 <img
