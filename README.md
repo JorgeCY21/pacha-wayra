@@ -9,7 +9,7 @@
 [![Data from NASA](https://img.shields.io/badge/Data%20Source-NASA-blue?logo=nasa&logoColor=white)](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-🎥 [**Live Demo**](https://pacha-wayra-ed2z.vercel.app/) • 📽️ [**Project Video**](https://www.youtube.com/watch?v=M9yXFX6RfbI)
+🎥 [**Live Demo**](https://pacha-wayra-official.vercel.app/) • 📽️ [**Project Video**](https://www.youtube.com/watch?v=M9yXFX6RfbI)
 
 </div>
 
@@ -128,7 +128,8 @@ The challenge:
 ## 👥 **Team Information**
 
 **Team:** Pacha Wayra  
-**Team Owner:** *Jorge Condorios*  
+**Team Leader:** *Jorge Condorios*  
+**Members:** *Taylor Betanzos, Joshep Ccahuana, and Carlo Valdivia*
 
 > We are a passionate team of developers and innovators dedicated to using technology to promote sustainability, cultural appreciation, and environmental awareness.
 
