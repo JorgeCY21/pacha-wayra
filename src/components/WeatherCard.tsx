@@ -1,3 +1,4 @@
+import { predict } from '../api_models/modelo'
 import weatherData from '../data/weather.json'
 import { Thermometer, Wind, Gauge, Droplets, CloudRain, Snowflake, WindIcon, Calendar } from 'lucide-react'
 
@@ -17,7 +18,7 @@ function WeatherCard({ region, date }: Props) {
   )
 
   // Calculate future weather based on date (this is simulated - you'll need real forecast data)
-  const getFutureWeather = (baseData: any, selectedDate: Date) => {
+  const getFutureWeather = async (baseData: any, selectedDate: Date) => {
     const today = new Date();
     const daysDiff = Math.ceil((selectedDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
     
@@ -40,15 +41,25 @@ function WeatherCard({ region, date }: Props) {
     // Add some randomness for future dates
     const randomVariation = (Math.random() - 0.5) * (daysDiff * 0.2);
     temperature += randomVariation;
-    
+
+    const data = await predict({
+      lat: baseData.lat,
+      lon: baseData.lon,
+      day: selectedDate.getDate(),
+      month: selectedDate.getMonth() + 1,
+      year: selectedDate.getFullYear()
+    });
+
+    console.log('llamando data')
+
     return {
-      temperature: Math.round(temperature),
+      temperature: data.temp,
       forecast,
-      humidity: Math.max(30, Math.min(90, baseData.humidity + (isRainySeason ? 15 : 0))),
-      windSpeed: `${Math.round(8 + (daysDiff * 0.1))} km/h`,
-      pressure: `${1010 + Math.round((Math.random() - 0.5) * 10)} hPa`,
-      rain: isRainySeason ? `${Math.round(40 + (Math.random() * 40))}%` : `${Math.round(10 + (Math.random() * 20))}%`,
-      snow: isWinter ? `${Math.round(Math.random() * 30)}%` : '0%',
+      humidity: data.hum,
+      windSpeed: `${data.wind} km/h`,
+      pressure: `${data.pres} hPa`,
+      rain: `${data.rain}%`,
+      snow: `${data.snow}%`,
       dust: daysDiff > 30 ? 'Moderate' : 'Low'
     };
   };
@@ -103,7 +114,7 @@ function WeatherCard({ region, date }: Props) {
           {getWeatherIcon(weatherDetails.forecast)}
         </div>
         <div className="text-right">
-          <div className="text-3xl font-bold text-gray-800">{weatherDetails.temperature}°C</div>
+          <div className="text-3xl font-bold text-gray-800">{weatherDetails.temperature}     °C</div>
           <div className="text-sm text-gray-600 capitalize">{weatherDetails.forecast}</div>
           <div className="text-xs text-gray-500 mt-1">
             {daysFromNow === 0 ? 'Today' : `${daysFromNow} day${daysFromNow !== 1 ? 's' : ''} from now`}
