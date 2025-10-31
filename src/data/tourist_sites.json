@@ -104,7 +104,7 @@
     "region": "Ancash",
     "name": "Huascarán National Park",
     "description": "UNESCO World Heritage Site encompassing the Cordillera Blanca mountain range, featuring snow-capped peaks, glacial lakes, and diverse Andean ecosystems. Home to Peru's highest mountain.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.peru.travel/Contenido/Atractivo/Imagen/en/190/1.1/Principal/pn-huascaran.jpg",
     "lat": -9.3333,
     "lng": -77.4167,
     "category": "Natural"
@@ -114,7 +114,7 @@
     "region": "Ancash",
     "name": "Chavín de Huántar",
     "description": "Major archaeological site of the Chavín culture, featuring underground galleries, stone monuments, and intricate carvings. Considered one of the earliest Andean civilizations.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "",
     "lat": -9.5928,
     "lng": -77.1783,
     "category": "Archaeological"
@@ -124,7 +124,7 @@
     "region": "Ancash",
     "name": "Llanganuco Lakes",
     "description": "Stunning turquoise glacial lakes nestled between Mount Huascarán and Mount Huandoy in the Cordillera Blanca. The lakes offer breathtaking mountain reflections and hiking opportunities.",
-    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Heaven%27s_Gate_Laguna_de_Chinancocha_02.jpg",
     "lat": -9.0833,
     "lng": -77.65,
     "category": "Natural"
@@ -134,7 +134,7 @@
     "region": "Ancash",
     "name": "Pastoruri Glacier",
     "description": "Accessible glacier in the Cordillera Blanca, popular for ice climbing and glacier trekking. The area features unique high-altitude ecosystems and panoramic mountain views.",
-    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Pastoruri_Glacier.jpg",
     "lat": -9.8833,
     "lng": -77.1833,
     "category": "Natural"
@@ -144,7 +144,7 @@
     "region": "Ancash",
     "name": "Huaylas Valley",
     "description": "Picturesque valley running parallel to the Cordillera Blanca, dotted with traditional towns, agricultural fields, and offering spectacular views of snow-capped mountains.",
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Caminho_Laguna_Par%C3%B3n_%28Cordillera_Blanca%29_-_panoramio_%282%29.jpg",
     "lat": -9.1667,
     "lng": -77.8333,
     "category": "Natural"
@@ -154,7 +154,7 @@
     "region": "Ancash",
     "name": "Lake Parón",
     "description": "Largest lake in the Cordillera Blanca, known for its intense turquoise waters and dramatic mountain backdrop featuring the Artesonraju peak, inspiration for the Paramount Pictures logo.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Laguna_Par%C3%B3n_01.jpg",
     "lat": -8.9833,
     "lng": -77.8667,
     "category": "Natural"
@@ -164,7 +164,7 @@
     "region": "Ancash",
     "name": "Monterrey Hot Springs",
     "description": "Natural thermal springs located near Huaraz, featuring multiple pools with mineral-rich waters at different temperatures. Popular for relaxation and therapeutic benefits.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/1f/bb/02/imag3696-largejpg.jpg?w=1400&h=-1&s=1",
     "lat": -9.5333,
     "lng": -77.5333,
     "category": "Natural"
@@ -174,7 +174,7 @@
     "region": "Ancash",
     "name": "Willkawain Archaeological Site",
     "description": "Pre-Inca Wari archaeological complex featuring stone structures with multiple chambers and ventilation systems. The site offers insights into ancient Andean architecture.",
-    "image": "https://images.unsplash.com/photo-1574289197505-47e373ff8c87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/WillkawainTempel2.jpg",
     "lat": -9.4833,
     "lng": -77.5167,
     "category": "Archaeological"
@@ -184,7 +184,7 @@
     "region": "Ancash",
     "name": "Cordillera Huayhuash",
     "description": "Spectacular mountain range adjacent to the Cordillera Blanca, offering some of Peru's most challenging and rewarding trekking routes with pristine alpine scenery.",
-    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Cordillera_Huayhuash_from_space.jpg",
     "lat": -10.3,
     "lng": -76.9,
     "category": "Natural"
@@ -194,7 +194,7 @@
     "region": "Ancash",
     "name": "Lake 69",
     "description": "Iconic turquoise glacial lake located at 4,600 meters altitude, accessible via a popular day hike from Huaraz. Known for its stunning color and dramatic mountain backdrop.",
-    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Laguna_69%2C_Yungay_-_Huaraz_-_Per%C3%BA.jpg",
     "lat": -9.0167,
     "lng": -77.6167,
     "category": "Natural"
@@ -204,7 +204,7 @@
     "region": "Apurímac",
     "name": "Saywite Archaeological Site",
     "description": "Important Inca archaeological complex featuring the famous Saywite Stone, a massive monolith with intricate carvings representing Inca cosmology and hydraulic engineering knowledge.",
-    "image": "https://images.unsplash.com/photo-1574289197505-47e373ff8c87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Sayhuite_Archaeological_site_-_rock_sculpture.jpg",
     "lat": -13.5333,
     "lng": -72.85,
     "category": "Archaeological"
@@ -214,7 +214,7 @@
     "region": "Apurímac",
     "name": "Ampay National Sanctuary",
     "description": "Protected natural area surrounding Mount Ampay, featuring unique Intimpa forests, crystal-clear lagoons, and diverse high-altitude flora and fauna including spectacled bears and Andean foxes.",
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Uspaccocha_nevado.jpg",
     "lat": -13.6167,
     "lng": -73.0,
     "category": "Natural"
@@ -224,7 +224,7 @@
     "region": "Apurímac",
     "name": "Pachachaca River Canyon",
     "description": "Dramatic canyon carved by the Pachachaca River, featuring impressive rock formations, traditional hanging bridges, and opportunities for adventure sports like rafting and rock climbing.",
-    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pachachaca.JPG",
     "lat": -13.65,
     "lng": -73.3833,
     "category": "Natural"
@@ -234,7 +234,7 @@
     "region": "Apurímac",
     "name": "Sondor Archaeological Complex",
     "description": "Pre-Inca and Inca archaeological site featuring pyramidal structures, ceremonial platforms, and strategic hilltop location offering panoramic views of Lake Pacucha and surrounding valleys.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.pacuchaglamping.com/wp-content/uploads/2022/09/sondor-andahuaylas.jpg",
     "lat": -13.6167,
     "lng": -73.3167,
     "category": "Archaeological"
@@ -244,7 +244,7 @@
     "region": "Apurímac",
     "name": "Lake Pacucha",
     "description": "Beautiful high-altitude lake surrounded by agricultural fields and traditional Quechua villages. Known for its tranquil waters, birdwatching opportunities, and stunning mountain reflections.",
-    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/3f/7f/81/20170421-151904-hdr-largejpg.jpg?w=2000&h=-1&s=1",
     "lat": -13.6167,
     "lng": -73.3333,
     "category": "Natural"
@@ -254,7 +254,7 @@
     "region": "Apurímac",
     "name": "Choquequirao Archaeological Complex",
     "description": "Spectacular Inca citadel often called 'Machu Picchu's sacred sister', featuring impressive terraces, temples, and residential areas in a remote mountain setting accessible only by trekking.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.peru.travel/Contenido/Atractivo/Imagen/en/135/1.1/Principal/choquequirao.jpg",
     "lat": -13.3922,
     "lng": -72.8742,
     "category": "Archaeological"
@@ -264,7 +264,7 @@
     "region": "Apurímac",
     "name": "Abancay Main Square",
     "description": "Charming colonial-style main square surrounded by historic buildings, churches, and local markets. The heart of Apurímac's capital city, offering cultural experiences and traditional cuisine.",
-    "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/d2/7f/1d/plaza-de-armas.jpg?w=2000&h=-1&s=1",
     "lat": -13.6333,
     "lng": -72.8833,
     "category": "Cultural"
@@ -274,7 +274,7 @@
     "region": "Apurímac",
     "name": "Cconoc Hot Springs",
     "description": "Natural thermal springs located along the Apurímac River, featuring multiple pools with mineral-rich waters at different temperatures, surrounded by stunning canyon scenery.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://i0.wp.com/illakunturtravel.com/wp-content/uploads/2025/02/Banos-termales-de-Cconoc.webp?w=1000&ssl=1",
     "lat": -13.5333,
     "lng": -73.0167,
     "category": "Natural"
@@ -284,7 +284,7 @@
     "region": "Apurímac",
     "name": "Tarahuasi Archaeological Site",
     "description": "Inca archaeological complex featuring well-preserved stone structures, agricultural terraces, and an impressive ceremonial platform with fine stonework overlooking the Pachachaca River.",
-    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Tarahuasi_Archaeological_site_-_overview.jpg",
     "lat": -13.5833,
     "lng": -72.9167,
     "category": "Archaeological"
@@ -294,7 +294,7 @@
     "region": "Apurímac",
     "name": "Apurímac River Valley",
     "description": "Majestic river valley carving through the Andes, offering spectacular canyon views, traditional villages, and opportunities for adventure tourism including white-water rafting and trekking.",
-    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.tierrasvivas.com/img/valley-of-apurimac-316.jpg",
     "lat": -13.5,
     "lng": -73.0,
     "category": "Natural"
@@ -404,7 +404,7 @@
     "region": "Ayacucho",
     "name": "Wari Archaeological Site",
     "description": "Capital of the ancient Wari Empire, one of the first great Andean civilizations. Features extensive stone ruins, underground galleries, and evidence of early urban planning in the Andes.",
-    "image": "https://images.unsplash.com/photo-1574289197505-47e373ff8c87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.salkantaytrekmachu.com/img/wari-archaeological-complex-ayacucho-tourism-163.jpg",
     "lat": -13.0667,
     "lng": -74.2,
     "category": "Archaeological"
@@ -414,7 +414,7 @@
     "region": "Ayacucho",
     "name": "Ayacucho Main Square",
     "description": "Beautiful colonial square surrounded by 33 churches and temples, earning Ayacucho the nickname 'City of Churches'. Features Baroque and Renaissance architecture and vibrant local life.",
-    "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Plaza_de_Armas_-_Ayacucho.JPG",
     "lat": -13.1583,
     "lng": -74.2239,
     "category": "Cultural"
@@ -424,7 +424,7 @@
     "region": "Ayacucho",
     "name": "Pikimachay Cave",
     "description": "Important archaeological site containing evidence of some of the earliest human settlements in Peru, dating back 20,000 years. Features prehistoric rock art and ancient artifacts.",
-    "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "http://tierrasvivas.com/img/tourism-in-pikimachay-or-piquimachay-caves-613.jpg",
     "lat": -13.05,
     "lng": -74.2333,
     "category": "Archaeological"
@@ -434,7 +434,7 @@
     "region": "Ayacucho",
     "name": "Titankayuq Waterfall",
     "description": "Spectacular 80-meter waterfall located in the highlands of Ayacucho, surrounded by lush vegetation and traditional Quechua communities. Perfect for hiking and nature photography.",
-    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.peru.travel/Contenido/General/Imagen/es/291/1.1/titankayoc.jpg",
     "lat": -13.2,
     "lng": -74.35,
     "category": "Natural"
@@ -444,7 +444,7 @@
     "region": "Ayacucho",
     "name": "Vilcashuamán Archaeological Complex",
     "description": "Important Inca administrative and religious center featuring a pyramid-shaped temple, sun temple, and impressive stonework. Served as a key hub along the Inca road system.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ayacucho54719.jpg",
     "lat": -13.6536,
     "lng": -73.9542,
     "category": "Archaeological"
@@ -454,7 +454,7 @@
     "region": "Ayacucho",
     "name": "Lake Pumapaccha",
     "description": "Beautiful high-altitude lake surrounded by dramatic mountain scenery and traditional villages. Known for its crystal-clear waters and opportunities for trout fishing and hiking.",
-    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://ayacuchoperu.net/uploads/large/catarata-de-pumapaccha-ayacucho-peru.jpg",
     "lat": -13.0167,
     "lng": -74.4167,
     "category": "Natural"
@@ -464,7 +464,7 @@
     "region": "Ayacucho",
     "name": "San Cristóbal de Huamanga Cathedral",
     "description": "Magnificent 17th-century cathedral dominating Ayacucho's main square. Features Baroque architecture, valuable religious art, and an impressive collection of colonial-era artifacts.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Catedral_de_Huamanga_-_Semana_Santa.jpg",
     "lat": -13.1583,
     "lng": -74.2239,
     "category": "Cultural"
@@ -474,7 +474,7 @@
     "region": "Ayacucho",
     "name": "Intihuatana Archaeological Site",
     "description": "Ancient astronomical observatory used by the Wari and later Inca civilizations to track solar movements. Features precisely carved stones aligned with celestial events.",
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Pumacocha_Archaeological_site_-_doorway.jpg",
     "lat": -13.5333,
     "lng": -74.35,
     "category": "Archaeological"
@@ -484,7 +484,7 @@
     "region": "Ayacucho",
     "name": "Quinua Town and Pampa de Ayacucho",
     "description": "Historic town known for its white houses and traditional pottery, located near the Pampa de Ayacucho where the decisive battle for Peruvian independence took place in 1824.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.ytuqueplanes.com/imagenes/fotos/novedades/sierra-pampa-quinua.JPG",
     "lat": -13.05,
     "lng": -74.1333,
     "category": "Cultural"
@@ -494,7 +494,7 @@
     "region": "Ayacucho",
     "name": "Millpu Turquoise Waters",
     "description": "Series of stunning natural pools with vibrant turquoise waters carved into white limestone formations. Located in the highlands and accessible via scenic hiking trails.",
-    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://vt-web-bucket-1.s3.amazonaws.com/uploads/2024/04/24/milllpu-conts_2.jpg",
     "lat": -13.7833,
     "lng": -74.3667,
     "category": "Natural"
@@ -504,7 +504,7 @@
     "region": "Cajamarca",
     "name": "Cumbe Mayo",
     "description": "Ancient pre-Inca aqueduct system carved into volcanic rock at 3,500 meters altitude. Features intricate stone channels, petroglyphs, and mysterious rock formations in a stunning highland landscape.",
-    "image": "https://images.unsplash.com/photo-1574289197505-47e373ff8c87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=2/tour_img/04d05a6d856e71a12d05ff3cf1ed96daeb99423b3edcd53069557dba777268c5.jpg",
     "lat": -7.1667,
     "lng": -78.5333,
     "category": "Archaeological"
@@ -514,7 +514,7 @@
     "region": "Cajamarca",
     "name": "Ventanillas de Otuzco",
     "description": "Ancient necropolis featuring hundreds of funeral niches carved into volcanic rock cliffs. These 'little windows' date back to the Cajamarca culture and offer insight into pre-Columbian burial practices.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Cajamarca_Ventanillas_de_Otuzco_lou.jpg",
     "lat": -7.1667,
     "lng": -78.5167,
     "category": "Archaeological"
@@ -524,7 +524,7 @@
     "region": "Cajamarca",
     "name": "Baños del Inca",
     "description": "Historic thermal baths where Inca Emperor Atahualpa was captured by Spanish conquistadors. Features natural hot springs with therapeutic properties and modern spa facilities.",
-    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.ytuqueplanes.com/imagenes/fotos/novedades/YTQP-Banner-Cajamarca.webp",
     "lat": -7.1667,
     "lng": -78.4667,
     "category": "Cultural"
@@ -2274,7 +2274,7 @@
     "region": "Tumbes",
     "name": "Aguas Verdes Border Market",
     "description": "Vibrant international market on the Peru-Ecuador border, offering a wide variety of goods from both countries. The market showcases the cultural and commercial exchange between neighboring nations.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://diariocorreo.pe/resizer/OzQdZIeTvp6H3PFkZJ069UZp8II=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/U56CM64RIZBLXHBOSJ5XSFFETE.jpg",
     "lat": -3.4833,
     "lng": -80.2333,
     "category": "Cultural"
@@ -2284,7 +2284,7 @@
     "region": "Tumbes",
     "name": "Pizarro's Cross",
     "description": "Historic site marking where Spanish conquistador Francisco Pizarro first landed in Peru in 1528. The monument commemorates the beginning of Spanish exploration and colonization in South America.",
-    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.turismoperuano.com/wp-content/uploads/la-cruz-de-la-conquista-tumbes.jpg",
     "lat": -3.5667,
     "lng": -80.4333,
     "category": "Cultural"
@@ -2294,7 +2294,7 @@
     "region": "Tumbes",
     "name": "El Bendito Fishing Village",
     "description": "Traditional fishing community where locals continue ancient fishing techniques using small boats and nets. The village offers authentic experiences of coastal life and fresh seafood straight from the ocean.",
-    "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOXnF2W5mLox_4Hei6aacsqtAcPpTJkVQJ5HR9u5wJvKAo3dzoRu7ONt_kuQBXD__K3lumO2iXRYr-TsyKQWLfWnZcOiIhFk1KDFfHMvlj-RDtn4TOSwKV-7_oUKFdVMnAePrN4S5TFaP0/s1600/reducIMG_5523.JPG",
     "lat": -3.8833,
     "lng": -80.8667,
     "category": "Cultural"
@@ -2304,7 +2304,7 @@
     "region": "Ucayali",
     "name": "Lake Yarinacocha",
     "description": "A large oxbow lake formed by the Ucayali River, known for its biodiversity and vibrant pink river dolphins. It's a gateway to indigenous Shipibo communities, where visitors can learn about traditional crafts and customs.",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Laguna_de_Yarinacocha_GCA.jpg",
     "lat": -8.35,
     "lng": -74.5667,
     "category": "Natural"
@@ -2314,7 +2314,7 @@
     "region": "Ucayali",
     "name": "Ucayali River",
     "description": "One of the main headwaters of the Amazon River, this massive waterway is a lifeline for the region. Boat journeys along the river offer unparalleled opportunities to witness the immensity of the Amazon basin and its wildlife.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://i.pinimg.com/736x/90/a5/5b/90a55b74cf4660ef962238e1938e633f.jpg",
     "lat": -6.0833,
     "lng": -73.7667,
     "category": "Natural"
@@ -2324,19 +2324,9 @@
     "region": "Ucayali",
     "name": "Cordillera Azul National Park",
     "description": "A vast and remote national park protecting a section of the tropical Andes known as the 'Blue Mountains.' It features dramatic waterfalls, deep canyons, and an incredible array of endemic species, making it a paradise for scientific research and adventure.",
-    "image": "https://images.unsplash.com/photo-1464822759843-44bcb45994c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.cima.org.pe/files/images/parque-nacional-cordillera-azul/ecosistemaLagunas-mediana.jpg",
     "lat": -7.75,
     "lng": -75.9,
-    "category": "Natural"
-  },
-  {
-    "id": 234,
-    "region": "Ucayali",
-    "name": "Bosanatz Park",
-    "description": "The main ecological park and green lung of the city of Pucallpa. It features walking trails through preserved jungle, a small lagoon, and is a popular spot for locals and tourists to experience the rainforest's flora and fauna without leaving the city.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-0.3.5&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    "lat": -8.3833,
-    "lng": -74.5333,
     "category": "Natural"
   },
   {
@@ -2344,7 +2334,7 @@
     "region": "Ucayali",
     "name": "Shipibo-Conibo Community of San Francisco",
     "description": "An indigenous community on the shores of Lake Yarinacocha renowned for its intricate and symbolic Kené artwork. Visitors can meet artisans, learn about their cosmology, and purchase directly sourced textiles and ceramics.",
-    "image": "https://images.unsplash.com/photo-1559136558-0a8e0dd66c0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Plaza_central_de_la_comunidad_nativa_de_San_Francisco_de_Yanacocha.jpg",
     "lat": -8.3667,
     "lng": -74.55,
     "category": "Cultural"
@@ -2354,7 +2344,7 @@
     "region": "Ucayali",
     "name": "Municipal Museum of Pucallpa",
     "description": "A cultural museum showcasing the archaeological history, biodiversity, and ethnography of the Ucayali region. Its collections include Shipibo-Conibo artifacts, regional fossils, and exhibits on the area's natural history.",
-    "image": "https://images.unsplash.com/photo-1583454377334-1c7f7b55e26e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://4.bp.blogspot.com/-a4VYIfUGjY8/WaC9nXWb5hI/AAAAAAAA_2s/x-sIlKsPqyEEha1ZovevAJt0CeOqz4V8wCLcBGAs/s640/museo-regional-de-ucayali.jpg",
     "lat": -8.3833,
     "lng": -74.55,
     "category": "Cultural"
@@ -2364,7 +2354,7 @@
     "region": "Ucayali",
     "name": "Boquerón del Padre Abad",
     "description": "A stunning natural corridor located in the El Sira Communal Reserve, featuring a narrow canyon with towering rock walls, lush vegetation, and the iconic 'Dormilon' waterfall. A key landmark on the Federico Basadre highway.",
-    "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Boquer%C3%B3n_de_Padre_Abad.jpg/1200px-Boquer%C3%B3n_de_Padre_Abad.jpg",
     "lat": -9.0333,
     "lng": -75.7667,
     "category": "Natural"
@@ -2374,7 +2364,7 @@
     "region": "Ucayali",
     "name": "Velo de la Novia Waterfall",
     "description": "Meaning 'Bride's Veil,' this beautiful waterfall is one of the main attractions within the Boquerón del Padre Abad. Its waters cascade down a dramatic rock face, creating a picturesque scene amidst the dense jungle.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Velo_de_la_Novia_Falls.jpg",
     "lat": -9.0333,
     "lng": -75.7667,
     "category": "Natural"
@@ -2384,7 +2374,7 @@
     "region": "Ucayali",
     "name": "Alexander von Humboldt National Forest",
     "description": "A protected area dedicated to the sustainable management of timber and non-timber forest resources. It serves as an important site for conservation, research, and environmental education in the Peruvian Amazon.",
-    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaXAQstNXwKC9hN8p4wmIYsfjz8IGykZwy8Q&s",
     "lat": -8.5,
     "lng": -74.6667,
     "category": "Natural"
@@ -2394,7 +2384,7 @@
     "region": "Ucayali",
     "name": "Puerto Inca Archaeological Site",
     "description": "Known as the 'Inca Port,' this archaeological complex is believed to have been a resting and provisioning point for the Incas on their route from the Andes to the Amazon. It features stone structures and offers insight into Inca expansion.",
-    "image": "https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "image": "https://www.incatrailmachu.com/img/peru-ruins-000.jpg",
     "lat": -9.3833,
     "lng": -74.9833,
     "category": "Cultural"
